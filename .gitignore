@@ -3,12 +3,19 @@ histos/
 
 #Output of commands
 outputs/
+SMSScans/DataCards/
+
+#Configs
+*.conf_tmp
+*.conf.bak
+*.conf.conf
 
 #compiled stuff
 *.so
 *.d
 *.pcm
-
+*.pyc
+*.pyo
 
 #mac crap
 .DS_Store
@@ -19,3 +26,12 @@ outputs/
 #debugging stuff
 *.debug
 *.log
+
+#ROOT
+CMSSW_*/
+
+#Code Output
+efficiency_table*
+
+#Local Scratch Directory
+scratch/

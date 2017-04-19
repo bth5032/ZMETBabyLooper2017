@@ -4,8 +4,8 @@
 
 #include "ConfigParser.C"
 
-TString PLOT_OUTPUT_LOCATION="/home/users/bhashemi/public_html/ZMET2016_NovemberClean/";
-TString HIST_OUTPUT_LOCATION="/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/";
+TString PLOT_OUTPUT_LOCATION="/home/users/bhashemi/public_html/ZMET2017/";
+TString HIST_OUTPUT_LOCATION="/nfs-7/userdata/bobak/ZMET2017_Hists/";
 
 TString parseConfDir(TString conf_path){
   /* Replace *configs/.../FNAME.conf with .../ */
@@ -45,7 +45,8 @@ TString getOutputDir(ConfigParser *conf, TString type){
 		}	
 	}
   else{
-    throw std::invalid_argument("In ConfigHelper::getOutputDir -- Did not recieve valid type, either hist or plot... got: "+type);
+    TString error = type.Prepend("In ConfigHelper::getOutputDir -- Did not recieve valid type, either hist or plot... got: ");
+    throw std::invalid_argument(error.Data());
     return TString("");
   }
 }
@@ -74,6 +75,40 @@ vector<double> parseVector(TString opt){
     token.ReplaceAll(" ", "");
     //cout<<"token: "<<token<<endl;
     ret.push_back(stod(token.Data()));
+  }
+  return ret;
+}
+
+vector<int> iparseVector(TString opt){
+  /* Parses options in the config files which are formatted to be vectors [int,int,int,...]*/
+  vector<int> ret;
+  TString token;
+  Ssiz_t from=0;
+  //cout<<"got vector in string form: "<<opt<<endl;
+  while(opt.Tokenize(token, from, "[,]")){
+    token.ReplaceAll("[", "");
+    token.ReplaceAll("]", "");
+    token.ReplaceAll(",", "");
+    token.ReplaceAll(" ", "");
+    //cout<<"token: "<<token<<endl;
+    ret.push_back(stoi(token.Data()));
+  }
+  return ret;
+}
+
+vector<TString> sParseVector(TString opt){
+  /* Parses options in the config files which are formatted to be vectors [string,string,string,...]*/
+  vector<TString> ret;
+  TString token;
+  Ssiz_t from=0;
+  //cout<<"got vector in string form: "<<opt<<endl;
+  while(opt.Tokenize(token, from, "[,]")){
+    token.ReplaceAll("[", "");
+    token.ReplaceAll("]", "");
+    token.ReplaceAll(",", "");
+    token.ReplaceAll(" ", "");
+    //cout<<"token: "<<token<<endl;
+    ret.push_back(TString(token.Data()));
   }
   return ret;
 }

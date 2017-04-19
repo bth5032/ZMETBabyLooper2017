@@ -1,0 +1,1227 @@
+<include configs/SRs/TChiWZ.cuts>
+configs/SRs/TChiWZ.cuts
+
+Processing doAll.C+("Data", "configs/LeonoraEvtLists/TChiWZ_no3lv/run_modes.conf_tmp")...
+Using config:
+DEFAULT::MET_max => 100
+DEFAULT::MET_min => 50
+DEFAULT::MT2_min => 80
+DEFAULT::Mjj_dphi_max => 110
+DEFAULT::NBjets_max => 0
+DEFAULT::Njets_min => 2
+DEFAULT::dPhi_MET_j1 => 0.4
+DEFAULT::dPhi_MET_j2 => 0.4
+DEFAULT::event_type => dilepton
+DEFAULT::flavor => dimuon
+DEFAULT::scaleTofb => 36.8
+DEFAULT::signal_region => LeonoraEvtLists
+DEFAULT::wide_dilmass => false
+Name => Data
+conf_path => configs/LeonoraEvtLists/TChiWZ_no3lv/run_modes.conf_tmp
+data => true
+data_set => [DileptonData-ee-Skimmed, DileptonData-mm-Skimmed, DileptonData-em-Skimmed]
+Datasets Incoming: 
+====================================
+Adding Skimmed EE Trigger Data
+Adding Skimmed MuMu Trigger Data
+Adding Skimmed EMu Trigger Data
+====================================
+Opening file /nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/LeonoraEvtLists/TChiWZ_no3lv/Data.root
+Histograms initialized
+Setting good run list: auxFiles/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON_snt.txt
+DATASET: [DileptonData-ee-Skimmed, DileptonData-mm-Skimmed, DileptonData-em-Skimmed]
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016B_23sep2016rereco_ee_v3_skim_1.root
+evt: 1536364729 run: 274422 lumi: 880
+evt: 1536364729 run: 274422 lumi: 880
+evt: 199680177 run: 275309 lumi: 150
+evt: 199680177 run: 275309 lumi: 150
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016C_23sep2016rereco_ee_v1_skim_1.root
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016D_23sep2016rereco_ee_v1_skim_1.root
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016E_23sep2016rereco_ee_v1_skim_1.root
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016F_23sep2016rereco_ee_v1_skim_1.root
+evt: 761910713 run: 278239 lumi: 461
+761910713 :Failed Mjj cut
+evt: 1415811356 run: 278808 lumi: 771
+evt: 1415811356 run: 278808 lumi: 771
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016G_23sep2016rereco_ee_v1_skim_1.root
+evt: 111242434 run: 279993 lumi: 123
+evt: 111242434 run: 279993 lumi: 123
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_ee_v2_skim_1.root
+evt: 226436034 run: 283307 lumi: 123
+evt: 226436034 run: 283307 lumi: 123
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_ee_v2_skim_2.root
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_ee_v3_skim_1.root
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016B_23sep2016rereco_mm_v3_skim_1.root
+evt: 50414492 run: 275001 lumi: 33
+evt: 50414492 run: 275001 lumi: 33
+evt: 45620502 run: 274251 lumi: 29
+evt: 45620502 run: 274251 lumi: 29
+evt: 191303099 run: 275309 lumi: 145
+evt: 191303099 run: 275309 lumi: 145
+evt: 1102076480 run: 274999 lumi: 597
+evt: 1102076480 run: 274999 lumi: 597
+evt: 391832426 run: 275124 lumi: 283
+evt: 391832426 run: 275124 lumi: 283
+evt: 1572199636 run: 274999 lumi: 866
+evt: 1572199636 run: 274999 lumi: 866
+evt: 252304856 run: 273502 lumi: 240
+evt: 252304856 run: 273502 lumi: 240
+evt: 2259751408 run: 274388 lumi: 1250
+evt: 2259751408 run: 274388 lumi: 1250
+evt: 222366391 run: 273447 lumi: 136
+evt: 222366391 run: 273447 lumi: 136
+evt: 1536364729 run: 274422 lumi: 880
+1536364729 :Is a duplicate
+evt: 1202988269 run: 274422 lumi: 688
+evt: 1202988269 run: 274422 lumi: 688
+evt: 598678844 run: 275068 lumi: 304
+evt: 598678844 run: 275068 lumi: 304
+evt: 160895688 run: 274442 lumi: 87
+evt: 160895688 run: 274442 lumi: 87
+evt: 555799453 run: 275371 lumi: 281
+evt: 555799453 run: 275371 lumi: 281
+evt: 478847765 run: 274315 lumi: 222
+evt: 478847765 run: 274315 lumi: 222
+evt: 1854840845 run: 274422 lumi: 1072
+evt: 1854840845 run: 274422 lumi: 1072
+evt: 258492954 run: 273302 lumi: 205
+evt: 258492954 run: 273302 lumi: 205
+evt: 352943047 run: 274284 lumi: 172
+evt: 352943047 run: 274284 lumi: 172
+evt: 429645602 run: 275309 lumi: 282
+evt: 429645602 run: 275309 lumi: 282
+evt: 2124587761 run: 273725 lumi: 1451
+evt: 2124587761 run: 273725 lumi: 1451
+evt: 90007284 run: 275338 lumi: 52
+evt: 90007284 run: 275338 lumi: 52
+evt: 491467528 run: 273554 lumi: 368
+evt: 491467528 run: 273554 lumi: 368
+evt: 623203810 run: 275067 lumi: 334
+evt: 623203810 run: 275067 lumi: 334
+evt: 165237392 run: 275344 lumi: 146
+evt: 165237392 run: 275344 lumi: 146
+evt: 98718085 run: 275068 lumi: 48
+evt: 98718085 run: 275068 lumi: 48
+evt: 831402395 run: 274388 lumi: 441
+evt: 831402395 run: 274388 lumi: 441
+evt: 121081925 run: 274160 lumi: 64
+evt: 121081925 run: 274160 lumi: 64
+evt: 1292052857 run: 274241 lumi: 782
+evt: 1292052857 run: 274241 lumi: 782
+evt: 32884734 run: 274241 lumi: 18
+evt: 32884734 run: 274241 lumi: 18
+evt: 199680177 run: 275309 lumi: 150
+199680177 :Is a duplicate
+evt: 364576876 run: 275124 lumi: 267
+evt: 364576876 run: 275124 lumi: 267
+evt: 90816020 run: 275284 lumi: 45
+evt: 90816020 run: 275284 lumi: 45
+evt: 661930012 run: 273425 lumi: 532
+evt: 661930012 run: 273425 lumi: 532
+evt: 507351115 run: 274157 lumi: 354
+evt: 507351115 run: 274157 lumi: 354
+evt: 334200984 run: 275370 lumi: 249
+evt: 334200984 run: 275370 lumi: 249
+evt: 2443324308 run: 273730 lumi: 2116
+evt: 2443324308 run: 273730 lumi: 2116
+evt: 1225811473 run: 275375 lumi: 714
+evt: 1225811473 run: 275375 lumi: 714
+evt: 1712716938 run: 274422 lumi: 985
+evt: 1712716938 run: 274422 lumi: 985
+evt: 694210809 run: 275375 lumi: 433
+evt: 694210809 run: 275375 lumi: 433
+evt: 1566677186 run: 275376 lumi: 956
+evt: 1566677186 run: 275376 lumi: 956
+evt: 711974880 run: 275337 lumi: 377
+evt: 711974880 run: 275337 lumi: 377
+evt: 629540779 run: 275338 lumi: 362
+evt: 629540779 run: 275338 lumi: 362
+evt: 513029908 run: 274338 lumi: 284
+evt: 513029908 run: 274338 lumi: 284
+evt: 671297808 run: 274422 lumi: 392
+evt: 671297808 run: 274422 lumi: 392
+evt: 769620071 run: 274250 lumi: 388
+evt: 769620071 run: 274250 lumi: 388
+evt: 120790282 run: 275073 lumi: 68
+evt: 120790282 run: 275073 lumi: 68
+evt: 85857592 run: 274971 lumi: 54
+evt: 85857592 run: 274971 lumi: 54
+evt: 777114507 run: 274241 lumi: 457
+evt: 777114507 run: 274241 lumi: 457
+evt: 821321121 run: 274316 lumi: 459
+evt: 821321121 run: 274316 lumi: 459
+evt: 238578205 run: 274338 lumi: 133
+evt: 238578205 run: 274338 lumi: 133
+evt: 507367976 run: 274999 lumi: 286
+evt: 507367976 run: 274999 lumi: 286
+evt: 406994229 run: 275291 lumi: 241
+evt: 406994229 run: 275291 lumi: 241
+evt: 528380366 run: 275291 lumi: 308
+evt: 528380366 run: 275291 lumi: 308
+evt: 66390706 run: 274968 lumi: 41
+evt: 66390706 run: 274968 lumi: 41
+evt: 839542171 run: 274969 lumi: 458
+evt: 839542171 run: 274969 lumi: 458
+evt: 265630730 run: 274998 lumi: 183
+evt: 265630730 run: 274998 lumi: 183
+evt: 75273175 run: 275067 lumi: 40
+evt: 75273175 run: 275067 lumi: 40
+evt: 55531807 run: 274420 lumi: 102
+evt: 55531807 run: 274420 lumi: 102
+evt: 999957050 run: 274969 lumi: 548
+evt: 999957050 run: 274969 lumi: 548
+evt: 611100260 run: 275074 lumi: 383
+evt: 611100260 run: 275074 lumi: 383
+evt: 1728469276 run: 275310 lumi: 1028
+evt: 1728469276 run: 275310 lumi: 1028
+evt: 583416853 run: 275310 lumi: 320
+evt: 583416853 run: 275310 lumi: 320
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016C_23sep2016rereco_mm_v1_skim_1.root
+evt: 799372980 run: 275836 lumi: 422
+evt: 799372980 run: 275836 lumi: 422
+evt: 180810773 run: 275890 lumi: 91
+evt: 180810773 run: 275890 lumi: 91
+evt: 65763233 run: 275886 lumi: 88
+evt: 65763233 run: 275886 lumi: 88
+evt: 24881293 run: 275832 lumi: 15
+evt: 24881293 run: 275832 lumi: 15
+evt: 48512973 run: 275963 lumi: 86
+evt: 48512973 run: 275963 lumi: 86
+evt: 1374244490 run: 275836 lumi: 768
+evt: 1374244490 run: 275836 lumi: 768
+evt: 154939362 run: 276242 lumi: 82
+evt: 154939362 run: 276242 lumi: 82
+evt: 128981569 run: 275832 lumi: 68
+evt: 128981569 run: 275832 lumi: 68
+evt: 1510282584 run: 276244 lumi: 1040
+evt: 1510282584 run: 276244 lumi: 1040
+evt: 98711848 run: 275774 lumi: 56
+evt: 98711848 run: 275774 lumi: 56
+evt: 185183260 run: 275776 lumi: 89
+evt: 185183260 run: 275776 lumi: 89
+evt: 987922830 run: 275847 lumi: 761
+evt: 987922830 run: 275847 lumi: 761
+evt: 281857557 run: 275832 lumi: 145
+evt: 281857557 run: 275832 lumi: 145
+evt: 1951383830 run: 276242 lumi: 1018
+evt: 1951383830 run: 276242 lumi: 1018
+evt: 358465002 run: 276282 lumi: 247
+evt: 358465002 run: 276282 lumi: 247
+evt: 582040157 run: 276097 lumi: 301
+evt: 582040157 run: 276097 lumi: 301
+evt: 975744985 run: 276282 lumi: 571
+evt: 975744985 run: 276282 lumi: 571
+evt: 1485274043 run: 275890 lumi: 768
+evt: 1485274043 run: 275890 lumi: 768
+evt: 202555137 run: 276282 lumi: 161
+evt: 202555137 run: 276282 lumi: 161
+evt: 981620426 run: 275890 lumi: 522
+evt: 981620426 run: 275890 lumi: 522
+evt: 16450104 run: 275833 lumi: 9
+evt: 16450104 run: 275833 lumi: 9
+evt: 371989162 run: 275918 lumi: 216
+evt: 371989162 run: 275918 lumi: 216
+evt: 155721965 run: 275912 lumi: 86
+evt: 155721965 run: 275912 lumi: 86
+evt: 1935233061 run: 276283 lumi: 1057
+evt: 1935233061 run: 276283 lumi: 1057
+evt: 57966889 run: 276282 lumi: 82
+evt: 57966889 run: 276282 lumi: 82
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016D_23sep2016rereco_mm_v1_skim_1.root
+evt: 551255740 run: 276811 lumi: 314
+evt: 551255740 run: 276811 lumi: 314
+evt: 69974863 run: 276361 lumi: 36
+evt: 69974863 run: 276361 lumi: 36
+evt: 88501831 run: 276807 lumi: 99
+evt: 88501831 run: 276807 lumi: 99
+evt: 656467006 run: 276586 lumi: 369
+evt: 656467006 run: 276586 lumi: 369
+evt: 2963610076 run: 276437 lumi: 1652
+evt: 2963610076 run: 276437 lumi: 1652
+evt: 2085215400 run: 276437 lumi: 1145
+evt: 2085215400 run: 276437 lumi: 1145
+evt: 960693547 run: 276437 lumi: 562
+evt: 960693547 run: 276437 lumi: 562
+evt: 806573271 run: 276437 lumi: 480
+evt: 806573271 run: 276437 lumi: 480
+evt: 631184958 run: 276581 lumi: 402
+evt: 631184958 run: 276581 lumi: 402
+evt: 161376426 run: 276810 lumi: 88
+evt: 161376426 run: 276810 lumi: 88
+evt: 370027188 run: 276501 lumi: 224
+evt: 370027188 run: 276501 lumi: 224
+evt: 3657447543 run: 276501 lumi: 2188
+evt: 3657447543 run: 276501 lumi: 2188
+evt: 3493689747 run: 276811 lumi: 2165
+evt: 3493689747 run: 276811 lumi: 2165
+evt: 1248061084 run: 276525 lumi: 757
+evt: 1248061084 run: 276525 lumi: 757
+evt: 829973370 run: 276776 lumi: 498
+evt: 829973370 run: 276776 lumi: 498
+evt: 2773123378 run: 276811 lumi: 1638
+evt: 2773123378 run: 276811 lumi: 1638
+evt: 2577054717 run: 276363 lumi: 1474
+evt: 2577054717 run: 276363 lumi: 1474
+evt: 2719080190 run: 276437 lumi: 1504
+evt: 2719080190 run: 276437 lumi: 1504
+evt: 656247657 run: 276653 lumi: 425
+evt: 656247657 run: 276653 lumi: 425
+evt: 242998980 run: 276317 lumi: 129
+evt: 242998980 run: 276317 lumi: 129
+evt: 418651650 run: 276437 lumi: 282
+evt: 418651650 run: 276437 lumi: 282
+evt: 2007409303 run: 276437 lumi: 1104
+evt: 2007409303 run: 276437 lumi: 1104
+evt: 725179598 run: 276587 lumi: 487
+evt: 725179598 run: 276587 lumi: 487
+evt: 60709768 run: 276527 lumi: 44
+evt: 60709768 run: 276527 lumi: 44
+evt: 59104726 run: 276502 lumi: 40
+evt: 59104726 run: 276502 lumi: 40
+evt: 1538911732 run: 276437 lumi: 869
+evt: 1538911732 run: 276437 lumi: 869
+evt: 322951146 run: 276775 lumi: 249
+evt: 322951146 run: 276775 lumi: 249
+evt: 761226281 run: 276437 lumi: 456
+evt: 761226281 run: 276437 lumi: 456
+evt: 1349354042 run: 276525 lumi: 809
+evt: 1349354042 run: 276525 lumi: 809
+evt: 704438652 run: 276776 lumi: 426
+evt: 704438652 run: 276776 lumi: 426
+evt: 366776019 run: 276776 lumi: 216
+evt: 366776019 run: 276776 lumi: 216
+evt: 1202159790 run: 276363 lumi: 671
+evt: 1202159790 run: 276363 lumi: 671
+evt: 1835234049 run: 276775 lumi: 1054
+evt: 1835234049 run: 276775 lumi: 1054
+evt: 4441699321 run: 276525 lumi: 2613
+evt: 4441699321 run: 276525 lumi: 2613
+evt: 761254794 run: 276361 lumi: 409
+evt: 761254794 run: 276361 lumi: 409
+evt: 2844763762 run: 276776 lumi: 1727
+evt: 2844763762 run: 276776 lumi: 1727
+evt: 148431377 run: 276317 lumi: 79
+evt: 148431377 run: 276317 lumi: 79
+evt: 237864560 run: 276655 lumi: 122
+evt: 237864560 run: 276655 lumi: 122
+evt: 937472881 run: 276808 lumi: 500
+evt: 937472881 run: 276808 lumi: 500
+evt: 517149012 run: 276776 lumi: 308
+evt: 517149012 run: 276776 lumi: 308
+evt: 405055062 run: 276808 lumi: 205
+evt: 405055062 run: 276808 lumi: 205
+evt: 299386443 run: 276315 lumi: 190
+evt: 299386443 run: 276315 lumi: 190
+evt: 95844035 run: 276659 lumi: 56
+evt: 95844035 run: 276659 lumi: 56
+evt: 1233403995 run: 276811 lumi: 676
+evt: 1233403995 run: 276811 lumi: 676
+evt: 60606902 run: 276776 lumi: 35
+evt: 60606902 run: 276776 lumi: 35
+evt: 160960764 run: 276807 lumi: 140
+evt: 160960764 run: 276807 lumi: 140
+evt: 599524472 run: 276776 lumi: 360
+evt: 599524472 run: 276776 lumi: 360
+evt: 1730941342 run: 276363 lumi: 965
+evt: 1730941342 run: 276363 lumi: 965
+evt: 162276255 run: 276659 lumi: 93
+evt: 162276255 run: 276659 lumi: 93
+evt: 1351744974 run: 276363 lumi: 753
+evt: 1351744974 run: 276363 lumi: 753
+evt: 2018924857 run: 276525 lumi: 1178
+evt: 2018924857 run: 276525 lumi: 1178
+evt: 2053046069 run: 276811 lumi: 1157
+evt: 2053046069 run: 276811 lumi: 1157
+evt: 671620251 run: 276525 lumi: 439
+evt: 671620251 run: 276525 lumi: 439
+evt: 226887973 run: 276542 lumi: 178
+evt: 226887973 run: 276542 lumi: 178
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016E_23sep2016rereco_mm_v1_skim_1.root
+evt: 4479888562 run: 276831 lumi: 2507
+evt: 4479888562 run: 276831 lumi: 2507
+evt: 308264066 run: 276870 lumi: 231
+evt: 308264066 run: 276870 lumi: 231
+evt: 1283027826 run: 276870 lumi: 737
+evt: 1283027826 run: 276870 lumi: 737
+evt: 367467579 run: 277127 lumi: 193
+evt: 367467579 run: 277127 lumi: 193
+evt: 499046387 run: 277096 lumi: 270
+evt: 499046387 run: 277096 lumi: 270
+evt: 528794792 run: 277094 lumi: 302
+evt: 528794792 run: 277094 lumi: 302
+evt: 25322312 run: 276940 lumi: 77
+evt: 25322312 run: 276940 lumi: 77
+evt: 1241950260 run: 277087 lumi: 1150
+evt: 1241950260 run: 277087 lumi: 1150
+evt: 373482955 run: 277305 lumi: 270
+evt: 373482955 run: 277305 lumi: 270
+evt: 423584675 run: 277148 lumi: 298
+evt: 423584675 run: 277148 lumi: 298
+evt: 152316487 run: 277071 lumi: 80
+evt: 152316487 run: 277071 lumi: 80
+evt: 1232573659 run: 277168 lumi: 654
+evt: 1232573659 run: 277168 lumi: 654
+evt: 38465689 run: 276947 lumi: 22
+evt: 38465689 run: 276947 lumi: 22
+evt: 487423829 run: 277148 lumi: 335
+evt: 487423829 run: 277148 lumi: 335
+evt: 98194428 run: 277180 lumi: 129
+evt: 98194428 run: 277180 lumi: 129
+evt: 483701418 run: 277194 lumi: 337
+evt: 483701418 run: 277194 lumi: 337
+evt: 284647538 run: 277420 lumi: 225
+evt: 284647538 run: 277420 lumi: 225
+evt: 440033931 run: 277127 lumi: 233
+evt: 440033931 run: 277127 lumi: 233
+evt: 735092876 run: 276834 lumi: 530
+evt: 735092876 run: 276834 lumi: 530
+evt: 383715357 run: 277069 lumi: 268
+evt: 383715357 run: 277069 lumi: 268
+evt: 992485886 run: 277148 lumi: 596
+evt: 992485886 run: 277148 lumi: 596
+evt: 146254557 run: 276947 lumi: 83
+evt: 146254557 run: 276947 lumi: 83
+evt: 1116918236 run: 277127 lumi: 589
+evt: 1116918236 run: 277127 lumi: 589
+evt: 599583398 run: 276831 lumi: 358
+evt: 599583398 run: 276831 lumi: 358
+evt: 3609587459 run: 276831 lumi: 1987
+evt: 3609587459 run: 276831 lumi: 1987
+evt: 3176251865 run: 276870 lumi: 1762
+evt: 3176251865 run: 276870 lumi: 1762
+evt: 2734404918 run: 277096 lumi: 1572
+evt: 2734404918 run: 277096 lumi: 1572
+evt: 714008290 run: 277127 lumi: 384
+evt: 714008290 run: 277127 lumi: 384
+evt: 73294343 run: 277069 lumi: 101
+evt: 73294343 run: 277069 lumi: 101
+evt: 1599287772 run: 277127 lumi: 860
+evt: 1599287772 run: 277127 lumi: 860
+evt: 622699685 run: 277127 lumi: 336
+evt: 622699685 run: 277127 lumi: 336
+evt: 1164010648 run: 277194 lumi: 704
+evt: 1164010648 run: 277194 lumi: 704
+evt: 1506544210 run: 276831 lumi: 845
+evt: 1506544210 run: 276831 lumi: 845
+evt: 578294770 run: 277094 lumi: 329
+evt: 578294770 run: 277094 lumi: 329
+evt: 101803627 run: 276935 lumi: 122
+evt: 101803627 run: 276935 lumi: 122
+evt: 2718470159 run: 277168 lumi: 1487
+evt: 2718470159 run: 277168 lumi: 1487
+evt: 760122412 run: 276950 lumi: 397
+evt: 760122412 run: 276950 lumi: 397
+evt: 3207512677 run: 277096 lumi: 1860
+evt: 3207512677 run: 277096 lumi: 1860
+evt: 687330514 run: 276831 lumi: 405
+evt: 687330514 run: 276831 lumi: 405
+evt: 2758706989 run: 276831 lumi: 1538
+evt: 2758706989 run: 276831 lumi: 1538
+evt: 208688687 run: 277166 lumi: 189
+evt: 208688687 run: 277166 lumi: 189
+evt: 469852840 run: 277166 lumi: 317
+evt: 469852840 run: 277166 lumi: 317
+evt: 984093713 run: 276950 lumi: 519
+evt: 984093713 run: 276950 lumi: 519
+evt: 127587312 run: 276948 lumi: 63
+evt: 127587312 run: 276948 lumi: 63
+evt: 508140216 run: 277166 lumi: 336
+evt: 508140216 run: 277166 lumi: 336
+evt: 414175353 run: 276935 lumi: 305
+evt: 414175353 run: 276935 lumi: 305
+evt: 698806328 run: 276950 lumi: 365
+evt: 698806328 run: 276950 lumi: 365
+evt: 405526372 run: 277094 lumi: 236
+evt: 405526372 run: 277094 lumi: 236
+evt: 1194474102 run: 277070 lumi: 637
+evt: 1194474102 run: 277070 lumi: 637
+evt: 668544567 run: 277305 lumi: 426
+evt: 668544567 run: 277305 lumi: 426
+evt: 1228548503 run: 277127 lumi: 650
+evt: 1228548503 run: 277127 lumi: 650
+evt: 1506904040 run: 277168 lumi: 810
+evt: 1506904040 run: 277168 lumi: 810
+evt: 254603687 run: 277072 lumi: 144
+evt: 254603687 run: 277072 lumi: 144
+evt: 618780574 run: 277070 lumi: 341
+evt: 618780574 run: 277070 lumi: 341
+evt: 1469045020 run: 277070 lumi: 795
+evt: 1469045020 run: 277070 lumi: 795
+evt: 123442712 run: 277087 lumi: 206
+evt: 123442712 run: 277087 lumi: 206
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016F_23sep2016rereco_mm_v1_skim_1.root
+evt: 99795815 run: 278406 lumi: 128
+evt: 99795815 run: 278406 lumi: 128
+evt: 44378323 run: 278017 lumi: 84
+evt: 44378323 run: 278017 lumi: 84
+evt: 922468691 run: 278770 lumi: 479
+evt: 922468691 run: 278770 lumi: 479
+evt: 206296403 run: 278803 lumi: 119
+evt: 206296403 run: 278803 lumi: 119
+evt: 200287523 run: 278803 lumi: 116
+evt: 200287523 run: 278803 lumi: 116
+evt: 712787009 run: 278017 lumi: 486
+evt: 712787009 run: 278017 lumi: 486
+evt: 163686738 run: 278805 lumi: 92
+evt: 163686738 run: 278805 lumi: 92
+evt: 33600849 run: 278310 lumi: 24
+evt: 33600849 run: 278310 lumi: 24
+evt: 800894400 run: 278308 lumi: 472
+evt: 800894400 run: 278308 lumi: 472
+evt: 583454337 run: 278239 lumi: 375
+evt: 583454337 run: 278239 lumi: 375
+evt: 223044166 run: 278017 lumi: 188
+evt: 223044166 run: 278017 lumi: 188
+evt: 1474700878 run: 278308 lumi: 856
+evt: 1474700878 run: 278308 lumi: 856
+evt: 849015575 run: 278167 lumi: 505
+evt: 849015575 run: 278167 lumi: 505
+evt: 2003942393 run: 278167 lumi: 1111
+evt: 2003942393 run: 278167 lumi: 1111
+evt: 2196385166 run: 278167 lumi: 1210
+evt: 2196385166 run: 278167 lumi: 1210
+evt: 139193612 run: 278239 lumi: 129
+evt: 139193612 run: 278239 lumi: 129
+evt: 27441029 run: 278315 lumi: 76
+evt: 27441029 run: 278315 lumi: 76
+evt: 71224066 run: 278805 lumi: 40
+evt: 71224066 run: 278805 lumi: 40
+evt: 1514852672 run: 278808 lumi: 831
+evt: 1514852672 run: 278808 lumi: 831
+evt: 1517902846 run: 278808 lumi: 833
+evt: 1517902846 run: 278808 lumi: 833
+evt: 525290168 run: 278239 lumi: 343
+evt: 525290168 run: 278239 lumi: 343
+evt: 761910713 run: 278239 lumi: 461
+761910713 :Is a duplicate
+evt: 500139826 run: 278017 lumi: 357
+evt: 500139826 run: 278017 lumi: 357
+evt: 1075741112 run: 278770 lumi: 559
+evt: 1075741112 run: 278770 lumi: 559
+evt: 1313360517 run: 278770 lumi: 682
+evt: 1313360517 run: 278770 lumi: 682
+evt: 228545898 run: 278770 lumi: 121
+evt: 228545898 run: 278770 lumi: 121
+evt: 321444945 run: 278808 lumi: 167
+evt: 321444945 run: 278808 lumi: 167
+evt: 216881264 run: 278017 lumi: 185
+evt: 216881264 run: 278017 lumi: 185
+evt: 289400670 run: 278193 lumi: 205
+evt: 289400670 run: 278193 lumi: 205
+evt: 140868372 run: 278315 lumi: 143
+evt: 140868372 run: 278315 lumi: 143
+evt: 810916840 run: 278308 lumi: 477
+evt: 810916840 run: 278308 lumi: 477
+evt: 454683658 run: 278406 lumi: 321
+evt: 454683658 run: 278406 lumi: 321
+evt: 1010744879 run: 278406 lumi: 620
+evt: 1010744879 run: 278406 lumi: 620
+evt: 1746082038 run: 278167 lumi: 964
+evt: 1746082038 run: 278167 lumi: 964
+evt: 190589499 run: 278805 lumi: 106
+evt: 190589499 run: 278805 lumi: 106
+evt: 923564687 run: 278239 lumi: 540
+evt: 923564687 run: 278239 lumi: 540
+evt: 227074878 run: 278770 lumi: 120
+evt: 227074878 run: 278770 lumi: 120
+evt: 525496135 run: 278167 lumi: 342
+evt: 525496135 run: 278167 lumi: 342
+evt: 979425869 run: 278239 lumi: 570
+evt: 979425869 run: 278239 lumi: 570
+evt: 3180471468 run: 278808 lumi: 1789
+evt: 3180471468 run: 278808 lumi: 1789
+evt: 358180709 run: 278017 lumi: 268
+evt: 358180709 run: 278017 lumi: 268
+evt: 148619238 run: 278308 lumi: 139
+evt: 148619238 run: 278308 lumi: 139
+evt: 83767665 run: 278239 lumi: 102
+evt: 83767665 run: 278239 lumi: 102
+evt: 998615983 run: 278240 lumi: 502
+evt: 998615983 run: 278240 lumi: 502
+evt: 214852492 run: 278017 lumi: 183
+evt: 214852492 run: 278017 lumi: 183
+evt: 422388965 run: 278017 lumi: 309
+evt: 422388965 run: 278017 lumi: 309
+evt: 67681776 run: 278509 lumi: 109
+evt: 67681776 run: 278509 lumi: 109
+evt: 638974092 run: 278349 lumi: 347
+evt: 638974092 run: 278349 lumi: 347
+evt: 45296145 run: 278509 lumi: 95
+evt: 45296145 run: 278509 lumi: 95
+evt: 584228958 run: 278803 lumi: 323
+evt: 584228958 run: 278803 lumi: 323
+evt: 174669350 run: 278193 lumi: 149
+evt: 174669350 run: 278193 lumi: 149
+evt: 2939008113 run: 278808 lumi: 1655
+evt: 2939008113 run: 278808 lumi: 1655
+evt: 399293418 run: 278315 lumi: 283
+evt: 399293418 run: 278315 lumi: 283
+evt: 64635874 run: 278770 lumi: 35
+evt: 64635874 run: 278770 lumi: 35
+evt: 1328797524 run: 278240 lumi: 685
+evt: 1328797524 run: 278240 lumi: 685
+evt: 1415811356 run: 278808 lumi: 771
+1415811356 :Is a duplicate
+evt: 2536673734 run: 278406 lumi: 1440
+evt: 2536673734 run: 278406 lumi: 1440
+evt: 2869977498 run: 278406 lumi: 1645
+evt: 2869977498 run: 278406 lumi: 1645
+evt: 361041572 run: 278406 lumi: 269
+evt: 361041572 run: 278406 lumi: 269
+evt: 1734756378 run: 278406 lumi: 1005
+evt: 1734756378 run: 278406 lumi: 1005
+evt: 242952528 run: 278803 lumi: 140
+evt: 242952528 run: 278803 lumi: 140
+evt: 370710626 run: 278345 lumi: 264
+evt: 370710626 run: 278345 lumi: 264
+evt: 2362030194 run: 278240 lumi: 1245
+evt: 2362030194 run: 278240 lumi: 1245
+evt: 826744488 run: 278308 lumi: 485
+evt: 826744488 run: 278308 lumi: 485
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016G_23sep2016rereco_mm_v1_skim_1.root
+evt: 593025609 run: 280385 lumi: 318
+evt: 593025609 run: 280385 lumi: 318
+evt: 1398973481 run: 278875 lumi: 762
+evt: 1398973481 run: 278875 lumi: 762
+evt: 196563738 run: 279844 lumi: 177
+evt: 196563738 run: 279844 lumi: 177
+evt: 1726350174 run: 280385 lumi: 920
+evt: 1726350174 run: 280385 lumi: 920
+evt: 132203912 run: 279887 lumi: 143
+evt: 132203912 run: 279887 lumi: 143
+evt: 16741914 run: 280017 lumi: 9
+evt: 16741914 run: 280017 lumi: 9
+evt: 367743293 run: 279844 lumi: 271
+evt: 367743293 run: 279844 lumi: 271
+evt: 35471238 run: 279844 lumi: 85
+evt: 35471238 run: 279844 lumi: 85
+evt: 1930186694 run: 279975 lumi: 1108
+evt: 1930186694 run: 279975 lumi: 1108
+evt: 47166555 run: 279993 lumi: 90
+evt: 47166555 run: 279993 lumi: 90
+evt: 461268471 run: 278820 lumi: 258
+evt: 461268471 run: 278820 lumi: 258
+evt: 645363521 run: 280364 lumi: 340
+evt: 645363521 run: 280364 lumi: 340
+evt: 889847642 run: 280249 lumi: 473
+evt: 889847642 run: 280249 lumi: 473
+evt: 759167636 run: 279715 lumi: 474
+evt: 759167636 run: 279715 lumi: 474
+evt: 1384835826 run: 280249 lumi: 743
+evt: 1384835826 run: 280249 lumi: 743
+evt: 1026912431 run: 279694 lumi: 563
+evt: 1026912431 run: 279694 lumi: 563
+evt: 373716150 run: 279760 lumi: 267
+evt: 373716150 run: 279760 lumi: 267
+evt: 209036256 run: 280330 lumi: 110
+evt: 209036256 run: 280330 lumi: 110
+evt: 81217292 run: 280330 lumi: 42
+evt: 81217292 run: 280330 lumi: 42
+evt: 2037943567 run: 279694 lumi: 1101
+evt: 2037943567 run: 279694 lumi: 1101
+evt: 1441761553 run: 280249 lumi: 775
+evt: 1441761553 run: 280249 lumi: 775
+evt: 1457220658 run: 279794 lumi: 860
+evt: 1457220658 run: 279794 lumi: 860
+evt: 1881551749 run: 279794 lumi: 1086
+evt: 1881551749 run: 279794 lumi: 1086
+evt: 582584222 run: 278975 lumi: 356
+evt: 582584222 run: 278975 lumi: 356
+evt: 213856231 run: 278875 lumi: 111
+evt: 213856231 run: 278875 lumi: 111
+evt: 1064658055 run: 279760 lumi: 643
+evt: 1064658055 run: 279760 lumi: 643
+evt: 734054688 run: 279794 lumi: 464
+evt: 734054688 run: 279794 lumi: 464
+evt: 1259734041 run: 279667 lumi: 746
+evt: 1259734041 run: 279667 lumi: 746
+evt: 405077299 run: 278969 lumi: 283
+evt: 405077299 run: 278969 lumi: 283
+evt: 1046547114 run: 279760 lumi: 634
+evt: 1046547114 run: 279760 lumi: 634
+evt: 538493797 run: 279767 lumi: 310
+evt: 538493797 run: 279767 lumi: 310
+evt: 1840657780 run: 280018 lumi: 1070
+evt: 1840657780 run: 280018 lumi: 1070
+evt: 1115744880 run: 279975 lumi: 676
+evt: 1115744880 run: 279975 lumi: 676
+evt: 1657648735 run: 279841 lumi: 975
+evt: 1657648735 run: 279841 lumi: 975
+evt: 339360581 run: 279887 lumi: 271
+evt: 339360581 run: 279887 lumi: 271
+evt: 934833372 run: 279975 lumi: 575
+evt: 934833372 run: 279975 lumi: 575
+evt: 485685969 run: 278923 lumi: 305
+evt: 485685969 run: 278923 lumi: 305
+evt: 2740335813 run: 279841 lumi: 1564
+evt: 2740335813 run: 279841 lumi: 1564
+evt: 321459146 run: 279071 lumi: 242
+evt: 321459146 run: 279071 lumi: 242
+evt: 128977341 run: 280191 lumi: 69
+evt: 128977341 run: 280191 lumi: 69
+evt: 484100714 run: 280017 lumi: 268
+evt: 484100714 run: 280017 lumi: 268
+evt: 2507068208 run: 279841 lumi: 1432
+evt: 2507068208 run: 279841 lumi: 1432
+evt: 1478751688 run: 279841 lumi: 873
+evt: 1478751688 run: 279841 lumi: 873
+evt: 464700190 run: 279115 lumi: 319
+evt: 464700190 run: 279115 lumi: 319
+evt: 481519066 run: 279931 lumi: 335
+evt: 481519066 run: 279931 lumi: 335
+evt: 251130289 run: 280191 lumi: 137
+evt: 251130289 run: 280191 lumi: 137
+evt: 353580600 run: 280191 lumi: 196
+evt: 353580600 run: 280191 lumi: 196
+evt: 956528108 run: 280017 lumi: 554
+evt: 956528108 run: 280017 lumi: 554
+evt: 111242434 run: 279993 lumi: 123
+111242434 :Is a duplicate
+evt: 618843314 run: 279588 lumi: 404
+evt: 618843314 run: 279588 lumi: 404
+evt: 177679464 run: 279029 lumi: 106
+evt: 177679464 run: 279029 lumi: 106
+evt: 1094779189 run: 280242 lumi: 598
+evt: 1094779189 run: 280242 lumi: 598
+evt: 704288490 run: 279588 lumi: 451
+evt: 704288490 run: 279588 lumi: 451
+evt: 35495309 run: 279887 lumi: 86
+evt: 35495309 run: 279887 lumi: 86
+evt: 375432780 run: 280363 lumi: 237
+evt: 375432780 run: 280363 lumi: 237
+evt: 1570931582 run: 280330 lumi: 820
+evt: 1570931582 run: 280330 lumi: 820
+evt: 642775195 run: 279760 lumi: 415
+evt: 642775195 run: 279760 lumi: 415
+evt: 513456334 run: 278820 lumi: 286
+evt: 513456334 run: 278820 lumi: 286
+evt: 541356859 run: 279694 lumi: 299
+evt: 541356859 run: 279694 lumi: 299
+evt: 3699201302 run: 279694 lumi: 2056
+evt: 3699201302 run: 279694 lumi: 2056
+evt: 5316881 run: 279685 lumi: 4
+evt: 5316881 run: 279685 lumi: 4
+evt: 308386114 run: 279024 lumi: 220
+evt: 308386114 run: 279024 lumi: 220
+evt: 754672805 run: 279931 lumi: 487
+evt: 754672805 run: 279931 lumi: 487
+evt: 3351899453 run: 280385 lumi: 1849
+evt: 3351899453 run: 280385 lumi: 1849
+evt: 661594594 run: 279975 lumi: 426
+evt: 661594594 run: 279975 lumi: 426
+evt: 644742765 run: 280330 lumi: 338
+evt: 644742765 run: 280330 lumi: 338
+evt: 2576595101 run: 278820 lumi: 1411
+evt: 2576595101 run: 278820 lumi: 1411
+evt: 3715152 run: 280385 lumi: 2
+evt: 3715152 run: 280385 lumi: 2
+evt: 1016441387 run: 280330 lumi: 536
+evt: 1016441387 run: 280330 lumi: 536
+evt: 1759473354 run: 279694 lumi: 952
+evt: 1759473354 run: 279694 lumi: 952
+evt: 2252379495 run: 279654 lumi: 1185
+evt: 2252379495 run: 279654 lumi: 1185
+evt: 2719792917 run: 279931 lumi: 1564
+evt: 2719792917 run: 279931 lumi: 1564
+evt: 802406967 run: 280364 lumi: 426
+evt: 802406967 run: 280364 lumi: 426
+evt: 525257256 run: 280251 lumi: 289
+evt: 525257256 run: 280251 lumi: 289
+evt: 3045408609 run: 280385 lumi: 1653
+3045408609 :Failed Mjj cut
+evt: 164766327 run: 278986 lumi: 140
+evt: 164766327 run: 278986 lumi: 140
+evt: 475048595 run: 280385 lumi: 255
+evt: 475048595 run: 280385 lumi: 255
+evt: 476721764 run: 280330 lumi: 252
+evt: 476721764 run: 280330 lumi: 252
+evt: 2829917529 run: 279694 lumi: 1538
+evt: 2829917529 run: 279694 lumi: 1538
+evt: 416324149 run: 280251 lumi: 228
+evt: 416324149 run: 280251 lumi: 228
+evt: 327973001 run: 280242 lumi: 184
+evt: 327973001 run: 280242 lumi: 184
+evt: 34534627 run: 280242 lumi: 19
+evt: 34534627 run: 280242 lumi: 19
+evt: 59548207 run: 280242 lumi: 32
+evt: 59548207 run: 280242 lumi: 32
+evt: 114095835 run: 280249 lumi: 62
+evt: 114095835 run: 280249 lumi: 62
+evt: 239948422 run: 279715 lumi: 197
+evt: 239948422 run: 279715 lumi: 197
+evt: 957484721 run: 280385 lumi: 515
+evt: 957484721 run: 280385 lumi: 515
+evt: 567304602 run: 279760 lumi: 376
+evt: 567304602 run: 279760 lumi: 376
+evt: 337781268 run: 279694 lumi: 188
+evt: 337781268 run: 279694 lumi: 188
+evt: 454321863 run: 280349 lumi: 239
+evt: 454321863 run: 280349 lumi: 239
+evt: 1259943982 run: 280330 lumi: 661
+evt: 1259943982 run: 280330 lumi: 661
+evt: 3176795912 run: 279694 lumi: 1756
+evt: 3176795912 run: 279694 lumi: 1756
+evt: 1220054509 run: 279760 lumi: 722
+evt: 1220054509 run: 279760 lumi: 722
+evt: 1469265912 run: 278969 lumi: 875
+evt: 1469265912 run: 278969 lumi: 875
+evt: 584959502 run: 279966 lumi: 393
+evt: 584959502 run: 279966 lumi: 393
+evt: 271967709 run: 279931 lumi: 223
+evt: 271967709 run: 279931 lumi: 223
+evt: 713632411 run: 279667 lumi: 453
+evt: 713632411 run: 279667 lumi: 453
+evt: 1708469549 run: 279667 lumi: 980
+evt: 1708469549 run: 279667 lumi: 980
+evt: 2179114839 run: 279931 lumi: 1250
+evt: 2179114839 run: 279931 lumi: 1250
+evt: 870822952 run: 279658 lumi: 485
+evt: 870822952 run: 279658 lumi: 485
+evt: 2790814579 run: 279931 lumi: 1609
+evt: 2790814579 run: 279931 lumi: 1609
+evt: 480857476 run: 278975 lumi: 292
+evt: 480857476 run: 278975 lumi: 292
+evt: 882486219 run: 279794 lumi: 547
+evt: 882486219 run: 279794 lumi: 547
+evt: 498184440 run: 279694 lumi: 276
+evt: 498184440 run: 279694 lumi: 276
+evt: 3605005450 run: 279931 lumi: 2107
+evt: 3605005450 run: 279931 lumi: 2107
+evt: 649780564 run: 279667 lumi: 419
+evt: 649780564 run: 279667 lumi: 419
+evt: 658314162 run: 279667 lumi: 423
+evt: 658314162 run: 279667 lumi: 423
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_mm_v2_skim_1.root
+evt: 36201823 run: 282732 lumi: 21
+evt: 36201823 run: 282732 lumi: 21
+evt: 530076746 run: 282734 lumi: 266
+evt: 530076746 run: 282734 lumi: 266
+evt: 436623344 run: 282734 lumi: 220
+evt: 436623344 run: 282734 lumi: 220
+evt: 207270681 run: 282731 lumi: 109
+evt: 207270681 run: 282731 lumi: 109
+evt: 500405170 run: 281707 lumi: 385
+evt: 500405170 run: 281707 lumi: 385
+evt: 1554238976 run: 281707 lumi: 952
+evt: 1554238976 run: 281707 lumi: 952
+evt: 169519666 run: 282735 lumi: 86
+evt: 169519666 run: 282735 lumi: 86
+evt: 169508579 run: 282735 lumi: 86
+evt: 169508579 run: 282735 lumi: 86
+evt: 603984247 run: 282800 lumi: 318
+evt: 603984247 run: 282800 lumi: 318
+evt: 559880471 run: 282807 lumi: 284
+evt: 559880471 run: 282807 lumi: 284
+evt: 285732828 run: 282807 lumi: 143
+evt: 285732828 run: 282807 lumi: 143
+evt: 622130933 run: 282807 lumi: 316
+evt: 622130933 run: 282807 lumi: 316
+evt: 431266223 run: 282807 lumi: 220
+evt: 431266223 run: 282807 lumi: 220
+evt: 2101414645 run: 282814 lumi: 1154
+evt: 2101414645 run: 282814 lumi: 1154
+evt: 862419688 run: 282814 lumi: 443
+evt: 862419688 run: 282814 lumi: 443
+evt: 209494241 run: 282922 lumi: 113
+evt: 209494241 run: 282922 lumi: 113
+evt: 438463248 run: 282919 lumi: 225
+evt: 438463248 run: 282919 lumi: 225
+evt: 883968818 run: 283043 lumi: 467
+evt: 883968818 run: 283043 lumi: 467
+evt: 582130676 run: 283043 lumi: 307
+evt: 582130676 run: 283043 lumi: 307
+evt: 292490919 run: 283043 lumi: 162
+evt: 292490919 run: 283043 lumi: 162
+evt: 143422195 run: 283052 lumi: 87
+evt: 143422195 run: 283052 lumi: 87
+evt: 154306972 run: 283052 lumi: 94
+evt: 154306972 run: 283052 lumi: 94
+evt: 479030330 run: 283059 lumi: 257
+evt: 479030330 run: 283059 lumi: 257
+evt: 188928947 run: 283283 lumi: 91
+evt: 188928947 run: 283283 lumi: 91
+evt: 391800362 run: 283270 lumi: 281
+evt: 391800362 run: 283270 lumi: 281
+evt: 830039201 run: 283270 lumi: 541
+evt: 830039201 run: 283270 lumi: 541
+evt: 2353949132 run: 283270 lumi: 1387
+evt: 2353949132 run: 283270 lumi: 1387
+evt: 722603926 run: 283270 lumi: 480
+evt: 722603926 run: 283270 lumi: 480
+evt: 11649408 run: 283306 lumi: 9
+evt: 11649408 run: 283306 lumi: 9
+evt: 226436034 run: 283307 lumi: 123
+226436034 :Is a duplicate
+evt: 173307472 run: 283270 lumi: 162
+evt: 173307472 run: 283270 lumi: 162
+evt: 1413738984 run: 283270 lumi: 873
+evt: 1413738984 run: 283270 lumi: 873
+evt: 74443913 run: 283306 lumi: 40
+evt: 74443913 run: 283306 lumi: 40
+evt: 474493176 run: 283306 lumi: 266
+evt: 474493176 run: 283306 lumi: 266
+evt: 834697629 run: 283307 lumi: 438
+evt: 834697629 run: 283307 lumi: 438
+evt: 1429043412 run: 283308 lumi: 757
+evt: 1429043412 run: 283308 lumi: 757
+evt: 1502419317 run: 283308 lumi: 801
+evt: 1502419317 run: 283308 lumi: 801
+evt: 1635590919 run: 283308 lumi: 888
+evt: 1635590919 run: 283308 lumi: 888
+evt: 678511248 run: 283308 lumi: 353
+evt: 678511248 run: 283308 lumi: 353
+evt: 278334398 run: 283308 lumi: 146
+evt: 278334398 run: 283308 lumi: 146
+evt: 48987779 run: 283306 lumi: 28
+evt: 48987779 run: 283306 lumi: 28
+evt: 17662543 run: 283308 lumi: 10
+evt: 17662543 run: 283308 lumi: 10
+evt: 411131170 run: 283306 lumi: 227
+evt: 411131170 run: 283306 lumi: 227
+evt: 463325727 run: 283353 lumi: 323
+evt: 463325727 run: 283353 lumi: 323
+evt: 123985858 run: 283359 lumi: 81
+evt: 123985858 run: 283359 lumi: 81
+evt: 505308078 run: 283353 lumi: 346
+evt: 505308078 run: 283353 lumi: 346
+evt: 774471445 run: 283353 lumi: 507
+evt: 774471445 run: 283353 lumi: 507
+evt: 100009692 run: 283353 lumi: 114
+evt: 100009692 run: 283353 lumi: 114
+evt: 446912670 run: 281613 lumi: 657
+evt: 446912670 run: 281613 lumi: 657
+evt: 70264911 run: 283358 lumi: 43
+evt: 70264911 run: 283358 lumi: 43
+evt: 1277644982 run: 283358 lumi: 695
+evt: 1277644982 run: 283358 lumi: 695
+evt: 111383006 run: 283353 lumi: 120
+evt: 111383006 run: 283353 lumi: 120
+evt: 915491525 run: 283358 lumi: 499
+evt: 915491525 run: 283358 lumi: 499
+evt: 1058388592 run: 282037 lumi: 585
+evt: 1058388592 run: 282037 lumi: 585
+evt: 2630982821 run: 283408 lumi: 1508
+evt: 2630982821 run: 283408 lumi: 1508
+evt: 2408546412 run: 283408 lumi: 1388
+evt: 2408546412 run: 283408 lumi: 1388
+evt: 867571507 run: 283408 lumi: 524
+evt: 867571507 run: 283408 lumi: 524
+evt: 2887013613 run: 283408 lumi: 1657
+evt: 2887013613 run: 283408 lumi: 1657
+evt: 85470426 run: 281639 lumi: 54
+evt: 85470426 run: 281639 lumi: 54
+evt: 101645567 run: 283408 lumi: 67
+evt: 101645567 run: 283408 lumi: 67
+evt: 138079864 run: 283478 lumi: 143
+evt: 138079864 run: 283478 lumi: 143
+evt: 223735882 run: 283478 lumi: 193
+evt: 223735882 run: 283478 lumi: 193
+evt: 836799689 run: 283478 lumi: 568
+evt: 836799689 run: 283478 lumi: 568
+evt: 490798625 run: 283453 lumi: 343
+evt: 490798625 run: 283453 lumi: 343
+evt: 675938052 run: 283453 lumi: 460
+evt: 675938052 run: 283453 lumi: 460
+evt: 891240730 run: 283478 lumi: 600
+evt: 891240730 run: 283478 lumi: 600
+evt: 963756973 run: 283478 lumi: 639
+evt: 963756973 run: 283478 lumi: 639
+evt: 321796236 run: 283478 lumi: 251
+evt: 321796236 run: 283478 lumi: 251
+evt: 775594501 run: 283478 lumi: 530
+evt: 775594501 run: 283478 lumi: 530
+evt: 115348344 run: 283478 lumi: 124
+evt: 115348344 run: 283478 lumi: 124
+evt: 964145967 run: 283478 lumi: 640
+evt: 964145967 run: 283478 lumi: 640
+evt: 633214550 run: 283478 lumi: 447
+evt: 633214550 run: 283478 lumi: 447
+evt: 949717708 run: 283478 lumi: 632
+evt: 949717708 run: 283478 lumi: 632
+evt: 576996573 run: 283453 lumi: 396
+evt: 576996573 run: 283453 lumi: 396
+evt: 113704325 run: 283548 lumi: 193
+evt: 113704325 run: 283548 lumi: 193
+evt: 10027757 run: 283681 lumi: 7
+evt: 10027757 run: 283681 lumi: 7
+evt: 654001763 run: 283682 lumi: 352
+evt: 654001763 run: 283682 lumi: 352
+evt: 1145342567 run: 283820 lumi: 651
+evt: 1145342567 run: 283820 lumi: 651
+evt: 1710802004 run: 283820 lumi: 968
+evt: 1710802004 run: 283820 lumi: 968
+evt: 238142984 run: 283820 lumi: 146
+evt: 238142984 run: 283820 lumi: 146
+evt: 576643608 run: 283830 lumi: 335
+evt: 576643608 run: 283830 lumi: 335
+evt: 991783679 run: 283820 lumi: 565
+evt: 991783679 run: 283820 lumi: 565
+evt: 446492516 run: 283820 lumi: 261
+evt: 446492516 run: 283820 lumi: 261
+evt: 2188980787 run: 283820 lumi: 1241
+evt: 2188980787 run: 283820 lumi: 1241
+evt: 368723574 run: 281707 lumi: 313
+evt: 368723574 run: 281707 lumi: 313
+evt: 230938296 run: 283865 lumi: 134
+evt: 230938296 run: 283865 lumi: 134
+evt: 659411107 run: 283877 lumi: 352
+evt: 659411107 run: 283877 lumi: 352
+evt: 1895625702 run: 283877 lumi: 1047
+evt: 1895625702 run: 283877 lumi: 1047
+evt: 1323447641 run: 283877 lumi: 702
+evt: 1323447641 run: 283877 lumi: 702
+evt: 855568077 run: 283876 lumi: 554
+855568077 :Failed dPhi MET with jet 2 cut
+evt: 1832415156 run: 283877 lumi: 1007
+evt: 1832415156 run: 283877 lumi: 1007
+evt: 548884270 run: 283876 lumi: 375
+evt: 548884270 run: 283876 lumi: 375
+evt: 433119744 run: 283876 lumi: 302
+evt: 433119744 run: 283876 lumi: 302
+evt: 893764445 run: 283876 lumi: 572
+evt: 893764445 run: 283876 lumi: 572
+evt: 268373042 run: 281641 lumi: 160
+evt: 268373042 run: 281641 lumi: 160
+evt: 385938027 run: 283884 lumi: 415
+evt: 385938027 run: 283884 lumi: 415
+evt: 1087396320 run: 283885 lumi: 593
+evt: 1087396320 run: 283885 lumi: 593
+evt: 1597583140 run: 283885 lumi: 873
+evt: 1597583140 run: 283885 lumi: 873
+evt: 299382109 run: 283884 lumi: 362
+evt: 299382109 run: 283884 lumi: 362
+evt: 1207148927 run: 283885 lumi: 659
+evt: 1207148927 run: 283885 lumi: 659
+evt: 726655537 run: 283934 lumi: 441
+evt: 726655537 run: 283934 lumi: 441
+evt: 951223171 run: 283934 lumi: 566
+evt: 951223171 run: 283934 lumi: 566
+evt: 1804614936 run: 283946 lumi: 1098
+evt: 1804614936 run: 283946 lumi: 1098
+evt: 693189517 run: 283946 lumi: 490
+evt: 693189517 run: 283946 lumi: 490
+evt: 732779286 run: 283946 lumi: 513
+evt: 732779286 run: 283946 lumi: 513
+evt: 1331982311 run: 283934 lumi: 784
+evt: 1331982311 run: 283934 lumi: 784
+evt: 117138699 run: 283946 lumi: 147
+evt: 117138699 run: 283946 lumi: 147
+evt: 4661260 run: 282034 lumi: 3
+evt: 4661260 run: 282034 lumi: 3
+evt: 2963652321 run: 282037 lumi: 1691
+evt: 2963652321 run: 282037 lumi: 1691
+evt: 2383636270 run: 282037 lumi: 1366
+evt: 2383636270 run: 282037 lumi: 1366
+evt: 1361525498 run: 282037 lumi: 754
+evt: 1361525498 run: 282037 lumi: 754
+evt: 80617323 run: 281707 lumi: 144
+evt: 80617323 run: 281707 lumi: 144
+evt: 1357072292 run: 281976 lumi: 767
+evt: 1357072292 run: 281976 lumi: 767
+evt: 1369240885 run: 281976 lumi: 774
+evt: 1369240885 run: 281976 lumi: 774
+evt: 84665016 run: 282035 lumi: 37
+evt: 84665016 run: 282035 lumi: 37
+evt: 1072792265 run: 282037 lumi: 593
+evt: 1072792265 run: 282037 lumi: 593
+evt: 15405861 run: 281639 lumi: 16
+evt: 15405861 run: 281639 lumi: 16
+evt: 311681746 run: 281797 lumi: 296
+evt: 311681746 run: 281797 lumi: 296
+evt: 1117345657 run: 281797 lumi: 741
+evt: 1117345657 run: 281797 lumi: 741
+evt: 1533615064 run: 281693 lumi: 805
+evt: 1533615064 run: 281693 lumi: 805
+evt: 675510075 run: 281797 lumi: 501
+evt: 675510075 run: 281797 lumi: 501
+evt: 1209409113 run: 281797 lumi: 792
+evt: 1209409113 run: 281797 lumi: 792
+evt: 154921517 run: 281693 lumi: 81
+evt: 154921517 run: 281693 lumi: 81
+evt: 1110673724 run: 281707 lumi: 718
+evt: 1110673724 run: 281707 lumi: 718
+evt: 3432844987 run: 281693 lumi: 1892
+evt: 3432844987 run: 281693 lumi: 1892
+evt: 325760233 run: 281641 lumi: 192
+evt: 325760233 run: 281641 lumi: 192
+evt: 552381436 run: 281693 lumi: 291
+evt: 552381436 run: 281693 lumi: 291
+evt: 702555889 run: 281693 lumi: 372
+evt: 702555889 run: 281693 lumi: 372
+evt: 1808223665 run: 282092 lumi: 1117
+evt: 1808223665 run: 282092 lumi: 1117
+evt: 52304953 run: 282712 lumi: 27
+evt: 52304953 run: 282712 lumi: 27
+evt: 69282688 run: 282712 lumi: 36
+evt: 69282688 run: 282712 lumi: 36
+evt: 73708764 run: 282730 lumi: 116
+evt: 73708764 run: 282730 lumi: 116
+evt: 90634618 run: 282730 lumi: 125
+evt: 90634618 run: 282730 lumi: 125
+evt: 105338603 run: 282731 lumi: 56
+evt: 105338603 run: 282731 lumi: 56
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_mm_v3_skim_1.root
+evt: 14203891 run: 284036 lumi: 8
+evt: 14203891 run: 284036 lumi: 8
+evt: 90742531 run: 284037 lumi: 47
+evt: 90742531 run: 284037 lumi: 47
+evt: 44438398 run: 284037 lumi: 23
+evt: 44438398 run: 284037 lumi: 23
+evt: 104670004 run: 284043 lumi: 67
+evt: 104670004 run: 284043 lumi: 67
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016B_23sep2016rereco_em_v3_skim_1.root
+evt: 769620071 run: 274250 lumi: 388
+769620071 :Is a duplicate
+evt: 265630730 run: 274998 lumi: 183
+265630730 :Is a duplicate
+evt: 258492954 run: 273302 lumi: 205
+258492954 :Is a duplicate
+evt: 821321121 run: 274316 lumi: 459
+821321121 :Is a duplicate
+evt: 1536364729 run: 274422 lumi: 880
+1536364729 :Is a duplicate
+evt: 1102076480 run: 274999 lumi: 597
+1102076480 :Is a duplicate
+evt: 1854840845 run: 274422 lumi: 1072
+1854840845 :Is a duplicate
+evt: 623203810 run: 275067 lumi: 334
+623203810 :Is a duplicate
+evt: 1225811473 run: 275375 lumi: 714
+1225811473 :Is a duplicate
+evt: 165237392 run: 275344 lumi: 146
+165237392 :Is a duplicate
+evt: 199680177 run: 275309 lumi: 150
+199680177 :Is a duplicate
+evt: 694210809 run: 275375 lumi: 433
+694210809 :Is a duplicate
+evt: 491467528 run: 273554 lumi: 368
+491467528 :Is a duplicate
+evt: 839542171 run: 274969 lumi: 458
+839542171 :Is a duplicate
+evt: 1728469276 run: 275310 lumi: 1028
+1728469276 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016C_23sep2016rereco_em_v1_skim_1.root
+evt: 987922830 run: 275847 lumi: 761
+987922830 :Is a duplicate
+evt: 1951383830 run: 276242 lumi: 1018
+1951383830 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016D_23sep2016rereco_em_v1_skim_1.root
+evt: 2007409303 run: 276437 lumi: 1104
+2007409303 :Is a duplicate
+evt: 3493689747 run: 276811 lumi: 2165
+3493689747 :Is a duplicate
+evt: 2577054717 run: 276363 lumi: 1474
+2577054717 :Is a duplicate
+evt: 162276255 run: 276659 lumi: 93
+162276255 :Is a duplicate
+evt: 59104726 run: 276502 lumi: 40
+59104726 :Is a duplicate
+evt: 2719080190 run: 276437 lumi: 1504
+2719080190 :Is a duplicate
+evt: 1538911732 run: 276437 lumi: 869
+1538911732 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016E_23sep2016rereco_em_v1_skim_1.root
+evt: 4479888562 run: 276831 lumi: 2507
+4479888562 :Is a duplicate
+evt: 3176251865 run: 276870 lumi: 1762
+3176251865 :Is a duplicate
+evt: 508140216 run: 277166 lumi: 336
+508140216 :Is a duplicate
+evt: 698806328 run: 276950 lumi: 365
+698806328 :Is a duplicate
+evt: 2718470159 run: 277168 lumi: 1487
+2718470159 :Is a duplicate
+evt: 38465689 run: 276947 lumi: 22
+38465689 :Is a duplicate
+evt: 373482955 run: 277305 lumi: 270
+373482955 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016F_23sep2016rereco_em_v1_skim_1.root
+evt: 454683658 run: 278406 lumi: 321
+454683658 :Is a duplicate
+evt: 1474700878 run: 278308 lumi: 856
+1474700878 :Is a duplicate
+evt: 826744488 run: 278308 lumi: 485
+826744488 :Is a duplicate
+evt: 148619238 run: 278308 lumi: 139
+148619238 :Is a duplicate
+evt: 979425869 run: 278239 lumi: 570
+979425869 :Is a duplicate
+evt: 922468691 run: 278770 lumi: 479
+922468691 :Is a duplicate
+evt: 242952528 run: 278803 lumi: 140
+242952528 :Is a duplicate
+evt: 1415811356 run: 278808 lumi: 771
+1415811356 :Is a duplicate
+evt: 761910713 run: 278239 lumi: 461
+761910713 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016G_23sep2016rereco_em_v1_skim_1.root
+evt: 454321863 run: 280349 lumi: 239
+454321863 :Is a duplicate
+evt: 642775195 run: 279760 lumi: 415
+642775195 :Is a duplicate
+evt: 734054688 run: 279794 lumi: 464
+734054688 :Is a duplicate
+evt: 934833372 run: 279975 lumi: 575
+934833372 :Is a duplicate
+evt: 759167636 run: 279715 lumi: 474
+759167636 :Is a duplicate
+evt: 645363521 run: 280364 lumi: 340
+645363521 :Is a duplicate
+evt: 196563738 run: 279844 lumi: 177
+196563738 :Is a duplicate
+evt: 3045408609 run: 280385 lumi: 1653
+3045408609 :Is a duplicate
+evt: 164766327 run: 278986 lumi: 140
+164766327 :Is a duplicate
+evt: 582584222 run: 278975 lumi: 356
+582584222 :Is a duplicate
+evt: 1384835826 run: 280249 lumi: 743
+1384835826 :Is a duplicate
+evt: 461268471 run: 278820 lumi: 258
+461268471 :Is a duplicate
+evt: 2740335813 run: 279841 lumi: 1564
+2740335813 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_em_v2_skim_1.root
+evt: 226436034 run: 283307 lumi: 123
+226436034 :Is a duplicate
+evt: 11649408 run: 283306 lumi: 9
+11649408 :Is a duplicate
+evt: 1429043412 run: 283308 lumi: 757
+1429043412 :Is a duplicate
+evt: 2630982821 run: 283408 lumi: 1508
+2630982821 :Is a duplicate
+evt: 949717708 run: 283478 lumi: 632
+949717708 :Is a duplicate
+evt: 836799689 run: 283478 lumi: 568
+836799689 :Is a duplicate
+evt: 576996573 run: 283453 lumi: 396
+576996573 :Is a duplicate
+evt: 2188980787 run: 283820 lumi: 1241
+2188980787 :Is a duplicate
+evt: 446492516 run: 283820 lumi: 261
+446492516 :Is a duplicate
+evt: 659411107 run: 283877 lumi: 352
+659411107 :Is a duplicate
+evt: 675510075 run: 281797 lumi: 501
+675510075 :Is a duplicate
+evt: 1369240885 run: 281976 lumi: 774
+1369240885 :Is a duplicate
+evt: 2383636270 run: 282037 lumi: 1366
+2383636270 :Is a duplicate
+evt: 52304953 run: 282712 lumi: 27
+52304953 :Is a duplicate
+evt: 207270681 run: 282731 lumi: 109
+207270681 :Is a duplicate
+evt: 438463248 run: 282919 lumi: 225
+438463248 :Is a duplicate
+Running over new file: /hadoop/cms/store/user/olivito/AutoTwopler_babies/merged/ZMET/V08-22-11/skim/data_Run2016H_Prompt_em_v3_skim_1.root
+Num events passed: 502
+
+0 Events Vetod from TTBar
+0 Events Vetod from TTGamma
+16297809 Events Processed
+75 Duplicates
+------------------------------
+CPU  Time:	11.9
+Real Time:	163.8
+

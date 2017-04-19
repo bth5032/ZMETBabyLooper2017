@@ -36,12 +36,21 @@ void printTemplatesDebug(const vector<double> &prediction, const vector<double> 
 vector<double> getMetTemplatesError(const vector<double> &stat_err, const vector<double> &bin_count, double normalization, int norm_bin, const vector<pair<double, double>> &bin_edge, TString SR){
   /* stat_err == statistical error on the template bins
      bin count == bin count on template bins
-     normalziation == bin count to which the sample was normalized
-     normalziation_bg == bin count of the templates which was normalized to 'normalization'
+     normalization == bin count to which the sample was normalized
+     normalization_bg == bin count of the templates which was normalized to 'normalization'
      SR == name of signal region */
   vector<double> output_errors;
 
-  normalization = err_mult(normalization, bin_count[norm_bin], sqrt(normalization), stat_err[norm_bin]);
+  cout<<"Normalization Factor for templates from bin "<<norm_bin<<": "<<normalization/bin_count[norm_bin]<<endl;
+
+  vector<double> noSubStatErrs=getPercentStatErrorsForNoEWKSub(SR);
+
+  for (int i=0; i<=noSubStatErrs.size(); i++){
+    noSubStatErrs[i] = noSubStatErrs[i]*bin_count[i];
+  }
+
+  //normalization = err_mult(normalization, bin_count[norm_bin], sqrt(normalization), stat_err[norm_bin]);
+  normalization = err_mult(normalization, bin_count[norm_bin], sqrt(normalization), noSubStatErrs[norm_bin]);
 
   //=========
   // Input EWK and Closure Errors
@@ -54,75 +63,82 @@ vector<double> getMetTemplatesError(const vector<double> &stat_err, const vector
   vector<double> MC_Closure_Error;
 
   if (SR == "Strong_Btag_2j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.2);
-    MC_Closure_Error.push_back(.2);
-    MC_Closure_Error.push_back(.2);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.2);  //100-150
+    MC_Closure_Error.push_back(.26);  //150-250
+    MC_Closure_Error.push_back(.26);  //250+
   }
   else if(SR == "Strong_Btag_4j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.25);
-    MC_Closure_Error.push_back(.25);
-    MC_Closure_Error.push_back(.25);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.12); //100-150
+    MC_Closure_Error.push_back(.18); //150-250
+    MC_Closure_Error.push_back(.18); //250+
   }
   else if (SR == "Strong_Btag_6j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.5);
-    MC_Closure_Error.push_back(.5);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.2);  //100-150
+    MC_Closure_Error.push_back(.31);  //150+
   }
   else if(SR == "Strong_Bveto_2j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.15);
-    MC_Closure_Error.push_back(.15);
-    MC_Closure_Error.push_back(.15);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.2); //100-150
+    MC_Closure_Error.push_back(.26); //150-250
+    MC_Closure_Error.push_back(.26); //250+
   }
   else if(SR == "Strong_Bveto_4j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.25);
-    MC_Closure_Error.push_back(.25);
-    MC_Closure_Error.push_back(.25);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.12); //100-150
+    MC_Closure_Error.push_back(.15); //150-250
+    MC_Closure_Error.push_back(.15); //250+
   }
   else if(SR == "Strong_Bveto_6j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.30);
-    MC_Closure_Error.push_back(.30);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.15); //100-150
+    MC_Closure_Error.push_back(.29); //150+
   }
   else if(SR == "TChiHZ"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.50);
-    MC_Closure_Error.push_back(.50);
-    MC_Closure_Error.push_back(.50);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.8); //100-150
+    MC_Closure_Error.push_back(.34); //150-250
+    MC_Closure_Error.push_back(.34); //250+
   }
   else if(SR == "TChiWZ"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.30);
-    MC_Closure_Error.push_back(.30);
-    MC_Closure_Error.push_back(.30);
-    MC_Closure_Error.push_back(.30);
+    //MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.11); //100-150
+    MC_Closure_Error.push_back(.24); //150-250
+    MC_Closure_Error.push_back(.24); //250-350
+    MC_Closure_Error.push_back(.24); //350+
   }
   else if(SR == "2j"){
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.00);
-    MC_Closure_Error.push_back(.50);
-    MC_Closure_Error.push_back(.50);
-    MC_Closure_Error.push_back(.50);
+    MC_Closure_Error.push_back(.00); //0-50
+    MC_Closure_Error.push_back(.00); //50-100
+    MC_Closure_Error.push_back(.50); //100-150
+    MC_Closure_Error.push_back(.50); //150-250
+    MC_Closure_Error.push_back(.50); //250+
   }
   else if(SR == "baseline"){
+    //MC_Closure_Error.push_back(.00);
     MC_Closure_Error.push_back(.00);
+    MC_Closure_Error.push_back(.25);
+    MC_Closure_Error.push_back(.25);
+  }
+  else if(SR == "Edge"){
     MC_Closure_Error.push_back(.00);
     MC_Closure_Error.push_back(.25);
     MC_Closure_Error.push_back(.25);
   }
   else{
-    throw std::invalid_argument("Invalid or missing SR set in config. Please check config variable \"SR\". (got \'"+SR+"\')");
+    std::stringstream message;
+    message<<"Invalid or missing SR set in config. Please check config variable \"SR\". (got '"<<SR<<"').";
+    throw std::invalid_argument(message.str());
   }
 
   EWK_Data = getEWKNumsForSample(SR);
@@ -146,7 +162,7 @@ vector<double> getMetTemplatesError(const vector<double> &stat_err, const vector
 
   for (int i=0; i<stat_err.size(); i++){
 
-    ewk_err.push_back(abs(bin_count[i] - EWK_Norm*No_EWK_BinCount[i]));
+    ewk_err.push_back(0.3*abs(bin_count[i] - EWK_Norm*No_EWK_BinCount[i]));
     norm_err.push_back(normalization*bin_count[i]);
     closure_err.push_back(bin_count[i]*MC_Closure_Error[i]);
 
@@ -155,10 +171,12 @@ vector<double> getMetTemplatesError(const vector<double> &stat_err, const vector
     cout<<" bin Count: "<<bin_count[i];
     cout<<" EWK Subtraction: "<<ewk_err[i];
     cout<<" Stat Error: "<< stat_err[i];
+    cout<<" Stat Error (noEwkSub): "<< noSubStatErrs[i];
     cout<<" Closure Error: "<<closure_err[i];
     cout<<" Normalization: "<<norm_err[i];
 
-    err_bin = stat_err[i]*stat_err[i]; //Statistical Error
+    //err_bin = stat_err[i]*stat_err[i]; //Statistical Error
+    err_bin = noSubStatErrs[i]*noSubStatErrs[i]; //Statistical Error
     err_bin += bin_count[i]*bin_count[i]*MC_Closure_Error[i]*MC_Closure_Error[i]; //Closure Error
     err_bin += normalization*bin_count[i]*normalization*bin_count[i]; //Normalization of Zjets
     cout<<" Stat+Norm+Closure "<<sqrt(err_bin);
@@ -168,14 +186,41 @@ vector<double> getMetTemplatesError(const vector<double> &stat_err, const vector
     output_errors.push_back(sqrt(err_bin));
   }
 
-  printTemplatesDebug(bin_count, output_errors, stat_err, closure_err, norm_err, ewk_err, bin_edge);
+  printTemplatesDebug(bin_count, output_errors, noSubStatErrs, closure_err, norm_err, ewk_err, bin_edge);
+
+  cout<<setprecision(10);
+  //--------------------------------
+  // To be parsed by datacard maker
+  //--------------------------------
+  cout<<"{zjets_norm} "<<1.+normalization<<endl;
+
+  double bin_count_safe = 1; //Don't divide by zero even when bin count is 0.
+
+  for (int i = 0; i<(int)bin_count.size(); i++){
+    bin_count_safe = bin_count[i];
+    cout<<"1-bin_count[i]"<<1-bin_count[i]<<endl;
+    if (bin_count[i] == 0){
+      cout<<"bin_count_[i] is 0"<<endl;
+    }
+    if (bin_count_safe == 0){
+      cout<<"bin_count_safe is 0"<<endl;
+      bin_count_safe = 1; //ensure no division by 0
+    }
+
+    cout<<"{BGbin"<<i<<"_zjets} "<<bin_count[i]<<endl;
+    cout<<"{zjets_clos_bin"<<i<<"} "<<1.+MC_Closure_Error[i]<<endl;
+    //cout<<"{zjets_stat_bin"<<i<<"} "<<1.+(stat_err[i]/bin_count_safe)<<endl;
+    cout<<"{zjets_stat_bin"<<i<<"} "<<1.+(noSubStatErrs[i]/bin_count_safe)<<endl;
+    cout<<"{zjets_ewk_bin"<<i<<"} "<<1.+(ewk_err[i]/bin_count_safe)<<endl;
+  }
+  cout<<setprecision(2);
 
   return output_errors;
 }
 
-pair<vector<double>,vector<double>> getFSError(const vector<double> &bin_count, double RSFOF){
-  double RSFOF_unc = 0.026; //ICHEP 2016
-  double kappa_unc = 0.035; //ICHEP 2016
+pair<vector<double>,vector<double>> getFSError(const vector<double> &bin_count, double RSFOFxKappa, TString SR){
+  double RSFOF_unc = 0.043/1.119; //Moriond 2017
+  double kappa_unc = 0.02/0.065;  //Moriond 2017
 
   vector<double> error_up;
   vector<double> error_dn;
@@ -185,17 +230,32 @@ pair<vector<double>,vector<double>> getFSError(const vector<double> &bin_count, 
     RooHistError::instance().getPoissonInterval(bin_count[i], bin_dn, bin_up);
 
     cout<<"bin count "<<bin_count[i]<<" Error_up "<<bin_up<<" Error_dn "<<bin_dn<<endl; 
-    bin_up = RSFOF*RSFOF*(bin_up - bin_count[i])*(bin_up - bin_count[i]) + RSFOF_unc*RSFOF_unc*bin_count[i]*bin_count[i] + kappa_unc*kappa_unc*bin_count[i]*bin_count[i];
-    bin_dn = RSFOF*RSFOF*(bin_count[i] - bin_dn)*(bin_count[i] - bin_dn) + RSFOF_unc*RSFOF_unc*bin_count[i]*bin_count[i] + kappa_unc*kappa_unc*bin_count[i]*bin_count[i];
+    bin_up = RSFOFxKappa*RSFOFxKappa*((bin_up - bin_count[i])*(bin_up - bin_count[i]) + RSFOF_unc*RSFOF_unc*bin_count[i]*bin_count[i] + kappa_unc*kappa_unc*bin_count[i]*bin_count[i]);
+    bin_dn = RSFOFxKappa*RSFOFxKappa*((bin_count[i] - bin_dn)*(bin_count[i] - bin_dn) + RSFOF_unc*RSFOF_unc*bin_count[i]*bin_count[i] + kappa_unc*kappa_unc*bin_count[i]*bin_count[i]);
 
     error_up.push_back(sqrt(bin_up));
     error_dn.push_back(sqrt(bin_dn));
   }
 
+  cout<<setprecision(10);
+  //--------------------------------
+  // To be parsed by datacard maker
+  //--------------------------------
+  cout<<"{rsfof_unc} "<<1.+RSFOF_unc<<endl;
+  cout<<"{kappa_unc} "<<1.+kappa_unc<<endl;
+  cout<<"{rsfof*kappa} "<<RSFOFxKappa<<endl;
+
+  for (int i = 0; i<(int)bin_count.size(); i++){
+    cout<<"{BGbin"<<i<<"_fsbkg} "<<bin_count[i]*RSFOFxKappa<<endl;
+    cout<<"{count_bin"<<i<<"_fsbkg} "<<bin_count[i]<<endl;
+  }
+  cout<<setprecision(2);
+
+
   return make_pair(error_up, error_dn);
 }
 
-vector<double> getRareSamplesError(const vector<double> &stat_err, const vector<double> &bin_count, double scale, double scale_unc){
+vector<double> getRareSamplesError(const vector<double> &stat_err, const vector<double> &bin_count, double scale, double scale_unc, TString SR){
   double err_bin;
 
   vector<double> error;
@@ -209,11 +269,36 @@ vector<double> getRareSamplesError(const vector<double> &stat_err, const vector<
     error.push_back(sqrt(err_bin));
   }
 
+
+  /*//--------------------------------
+  // To be parsed by datacard maker
+  //--------------------------------
+
+  cout<<"{BGmet100to150_mcbkg} "<<bin_count[2]<<endl;
+  cout<<"{mc_stat_met100to150} "<<stat_err[2]<<endl;
+
+  cout<<"{BGmet150to250_mcbkg} "<<bin_count[3]<<endl;
+  cout<<"{mc_stat_met150to250} "<<stat_err[3]<<endl;
+  
+  if(SR == "TChiWZ"){
+    cout<<"{BGmet250to350_mcbkg} "<<bin_count[4]<<endl;
+    cout<<"{mc_stat_met250to350} "<<stat_err[4]<<endl;
+
+    cout<<"{BGmet350toInf_mcbkg} "<<bin_count[5]<<endl;
+    cout<<"{mc_stat_met350toInf} "<<stat_err[5]<<endl;
+  }
+  else{
+    cout<<"{BGmet250toInf_mcbkg} "<<bin_count[4]<<endl;
+    cout<<"{mc_stat_met250toInf} "<<stat_err[4]<<endl;
+  }*/
+
+  
+
   return error;
 }
 
 void printErrors(const vector<double> &temp_err, const vector<double> &rare_err, const pair<vector<double>, vector<double>> &fs_err, const vector<double> &bin_low){
-  cout<<"Sample ";
+  cout<<"\\MET [GeV] ";
   for (int i = 0; i<temp_err.size(); i++){
     cout<<bin_low[i]<<"-"<<bin_low[i+1]<<" ";
   }
@@ -238,6 +323,31 @@ void printErrors(const vector<double> &temp_err, const vector<double> &rare_err,
     cout<<"+"<<temp_err[i]+rare_err[i]+fs_err.first[i]<<"-"<<temp_err[i]+rare_err[i]+fs_err.second[i]<<" ";
   }
   cout<<endl;
+}
+
+TGraphAsymmErrors* getErrorTGraph(const vector<double> &temp_count, const vector<double> &temp_err, const vector<double> &rare_count, const vector<double> &rare_err, const vector<double> &fs_count, const pair<vector<double>,vector<double>> &fs_err, const vector<pair<double,double>> &bin_low, const vector<double> &data_count, double RSFOF /*Really just the scale factor*/){
+  Double_t bin_sum[temp_err.size()];
+  Double_t bin_err_high[temp_err.size()];
+  Double_t bin_err_low[temp_err.size()];
+  Double_t bin_width[temp_err.size()];
+  Double_t bin_left[temp_err.size()];
+  Double_t zeros[temp_err.size()];
+
+  for (int i = 0; i<temp_err.size(); i++){
+    bin_sum[i] = temp_count[i]+RSFOF*fs_count[i]+rare_count[i];
+    bin_err_high[i] = sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.first[i]*fs_err.first[i]);
+    bin_err_low[i] = sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.second[i]*fs_err.second[i]);
+    
+    bin_left[i] = bin_low[i].first; //left bin so that all centers are in plot for sure.
+    bin_width[i] = bin_low[i].second - bin_low[i].first; //high bin edge - low bin edge
+    zeros[i] = 0; //used as x low width to get around bin center not on screen.
+  }
+
+  //TGraphAsymmErrors(num bins, x centers, y centers, x low width, x high width, y low width, y high width);
+  TGraphAsymmErrors* errs = new TGraphAsymmErrors(temp_err.size(), bin_left, bin_sum, zeros, bin_width, bin_err_low, bin_err_high);
+
+  return errs;
+
 }
 
 void printCounts(const vector<double> &temp_count, const vector<double> &temp_err, const vector<double> &rare_count, const vector<double> &rare_err, const vector<double> &fs_count, const pair<vector<double>,vector<double>> &fs_err, const vector<pair<double,double>> &bin_low, const vector<double> &data_count, double RSFOF /*Really just the scale factor*/){
@@ -284,7 +394,7 @@ void printLatexCounts(const vector<double> temp_count, const vector<double> &tem
   }
   cout<<"l }"<<endl;
   
-  cout<<"LATEXTABLE: Sample ";
+  cout<<"LATEXTABLE: \\MET [GeV] ";
   cout<<setprecision(0);
   for (int i = 0; i<temp_err.size(); i++){
     cout<<" & "<<(int) bin_low[i].first<<"-"<<(int) bin_low[i].second;
@@ -298,7 +408,7 @@ void printLatexCounts(const vector<double> temp_count, const vector<double> &tem
   cout<<" \\\\" <<endl;
   cout<<"LATEXTABLE: FS ";
   for (int i = 0; i<fs_err.first.size(); i++){
-    cout<<" & "<<"$"<<RSFOF*fs_count[i]<<"^{"<<fs_err.first[i]<<"}_{"<<fs_err.second[i]<<"}$ ";
+    cout<<" & "<<"$"<<RSFOF*fs_count[i]<<"^{+"<<fs_err.first[i]<<"}_{-"<<fs_err.second[i]<<"}$ ";
   }
   cout<<" \\\\" <<endl;
     cout<<"LATEXTABLE: Rares ";
@@ -308,7 +418,7 @@ void printLatexCounts(const vector<double> temp_count, const vector<double> &tem
   cout<<" \\\\ \\hline" <<endl;
   cout<<"LATEXTABLE: Sum ";
   for (int i = 0; i<temp_err.size(); i++){
-    cout<<" & "<<"$"<<temp_count[i]+RSFOF*fs_count[i]+rare_count[i]<<"^{"<<sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.first[i]*fs_err.first[i])<<"}_{"<<sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.second[i]*fs_err.second[i])<<"}$ ";
+    cout<<" & "<<"$"<<temp_count[i]+RSFOF*fs_count[i]+rare_count[i]<<"^{+"<<sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.first[i]*fs_err.first[i])<<"}_{-"<<sqrt(temp_err[i]*temp_err[i]+rare_err[i]*rare_err[i]+fs_err.second[i]*fs_err.second[i])<<"}$ ";
   }
   cout<<"\\\\ \\hline"<<endl;
   cout<<"LATEXTABLE: Data ";
@@ -337,8 +447,8 @@ void computeErrors(){
   vector<double> rare_bin_count = {12.2,18.3,9,7.9,8.9};
 
   vector<double> temp_err = getMetTemplatesError(temp_stat_err, temp_bin_count, sqrt(6995), 1, bin_edge, "2j");
-  pair<vector<double>,vector<double>> FS_err = getFSError(FS_bin_count, 1.087);
-  vector<double> rare_err = getRareSamplesError(rare_stat_err, rare_bin_count, 1.5, .5);
+  pair<vector<double>,vector<double>> FS_err = getFSError(FS_bin_count, 1.087, "2j");
+  vector<double> rare_err = getRareSamplesError(rare_stat_err, rare_bin_count, 1.5, .5, "2j");
   cout<<"====================================\n\n\n";
   printErrors(temp_err, rare_err, FS_err, bin_low);
 }

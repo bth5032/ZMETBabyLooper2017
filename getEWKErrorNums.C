@@ -13,44 +13,44 @@ using namespace std;
 vector<TString> getFileLocation(TString sample_name){
   vector<TString> fnames;
   if (sample_name=="Strong_Btag_2j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/2j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/2j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/2j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/2j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="Strong_Btag_4j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/4j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/4j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/4j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/4j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="Strong_Btag_6j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/6j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Btag/6j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/6j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Btag/6j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="Strong_Bveto_2j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/2j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/2j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/2j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/2j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="Strong_Bveto_4j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/4j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/4j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/4j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/4j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="Strong_Bveto_6j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/6j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/Strong_Bveto/6j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/6j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/Strong_Bveto/6j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="TChiHZ"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiHZ/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiHZ/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/TChiHZ/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/TChiHZ/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="TChiWZ"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiWZ/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiWZ/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/TChiWZ/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/TChiWZ/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="2j"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/2j/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/2j/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/2j/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/2j/PhotonData_NoEWKSub.root");
   }
   else if (sample_name=="baseline"){
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/baseline/PhotonData.root");
-    fnames.push_back("/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/baseline/PhotonData_NoEWKSub.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/baseline/PhotonData.root");
+    fnames.push_back("/nfs-7/userdata/bobak/ZMET2017_Hists/prediction/PhotonData_VPTRWT/baseline/PhotonData_NoEWKSub.root");
   }
 
   return fnames;
@@ -77,14 +77,14 @@ pair<double, vector<double>> getEWKNumsForSample(TString sample_name){
   //cout<<__LINE__<<endl;
 
   if(sample_name == "Strong_Bveto_6j" || sample_name == "Strong_Btag_6j" || sample_name == "baseline"){
-    bins.push_back(0);
+    //bins.push_back(0);
     bins.push_back(50);
     bins.push_back(100);
     bins.push_back(150);
     bins.push_back(6001);
   }
   else if(sample_name == "TChiWZ"){
-    bins.push_back(0);
+    //bins.push_back(0);
     bins.push_back(50);
     bins.push_back(100);
     bins.push_back(150);
@@ -93,7 +93,7 @@ pair<double, vector<double>> getEWKNumsForSample(TString sample_name){
     bins.push_back(6001);
   }
   else{
-    bins.push_back(0);
+    //bins.push_back(0);
     bins.push_back(50);
     bins.push_back(100);
     bins.push_back(150);
@@ -124,6 +124,62 @@ pair<double, vector<double>> getEWKNumsForSample(TString sample_name){
   }
 
   return make_pair(lowbin_withEwkSub, noSubNums);
+}
+
+vector<double> getPercentStatErrorsForNoEWKSub(TString sample_name){
+  cout<<setprecision(15);
+  vector<TString> fnames = getFileLocation(sample_name);
+
+  //cout<<__LINE__<<endl;
+
+  TFile* no_sub_file = TFile::Open(fnames[1]);
+
+  //cout<<__LINE__<<endl;
+  TH1D* no_sub_hist = (TH1D*) ((TH1D*) no_sub_file->Get("type1MET"));   
+
+
+  vector<double> bins, noSubCounts, noSubErrs;
+  double err_bin;
+
+  //cout<<__LINE__<<endl;
+
+  if(sample_name == "Strong_Bveto_6j" || sample_name == "Strong_Btag_6j" || sample_name == "baseline"){
+    //bins.push_back(0);
+    bins.push_back(50);
+    bins.push_back(100);
+    bins.push_back(150);
+    bins.push_back(6001);
+  }
+  else if(sample_name == "TChiWZ"){
+    //bins.push_back(0);
+    bins.push_back(50);
+    bins.push_back(100);
+    bins.push_back(150);
+    bins.push_back(250);
+    bins.push_back(350);
+    bins.push_back(6001);
+  }
+  else{
+    //bins.push_back(0);
+    bins.push_back(50);
+    bins.push_back(100);
+    bins.push_back(150);
+    bins.push_back(250);
+    bins.push_back(6001);
+  }
+  cout<<"Deriving NoEWKSub stat errors:"<<endl;
+
+  zeroNegatives(no_sub_hist);
+
+  for (int i = 0; i<(int)bins.size()-1; i++){
+    noSubCounts.push_back(no_sub_hist->IntegralAndError(bins[i],bins[i+1] - 0.01, err_bin));
+    noSubErrs.push_back(err_bin);
+  }
+  
+  for (int i = 0; i<(int)noSubErrs.size(); i++){
+    noSubErrs[i] = noSubErrs[i]/noSubCounts[i];
+  }
+  return noSubErrs;
 }
 
 /*void printDiff(TString a, TString b, TString c){

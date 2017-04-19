@@ -1,6 +1,7 @@
-# 2016METClosureTests
-Closure Tests for the 2016 ZMET Analysis.
+# 2017 ZMET Baby Looper
 
-This repository contains the code to do the closure tests between the Z boson events and photon events with jets at the LHC for the 2016 ZMET analysis.
+Baby looper for the 2017 ZMET Analysis.
+
+This repository contains the code that runs on all the 2017 ZMET babies
 
 The babies are made with the [ZMET2016 code in the cmstas group](https://github.com/cmstas/ZMET2016). 

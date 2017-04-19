@@ -1,16 +1,30 @@
 . funcs.sh
 
-function makeAllFSHists {
-  makeHistos ${sample_name} configs/FS_mass_window_studies/${config_id}_onZ/run_modes.conf; 
-  makeHistos ${sample_name} configs/FS_mass_window_studies/${config_id}_aboveZ/run_modes.conf; 
-  makeHistos ${sample_name} configs/FS_mass_window_studies/${config_id}_belowZ/run_modes.conf; 
+function makeALLFSStudy {
+  makeAllForDir configs/FS_mass_window_studies/${config_id}_onZ all ${sample_name}
+  makeAllForDir configs/FS_mass_window_studies/${config_id}_aboveZ all ${sample_name}
+  makeAllForDir configs/FS_mass_window_studies/${config_id}_belowZ all ${sample_name}
 }
 
-function makeFSStackPlots {
-  makePlots configs/FS_mass_window_studies/${config_id}_onZ/stackplots.conf; 
-  makePlots configs/FS_mass_window_studies/${config_id}_aboveZ/stackplots.conf; 
-  makePlots configs/FS_mass_window_studies/${config_id}_belowZ/stackplots.conf
+function remakeFSRatioPlots {
+  remakeFSRatioPlots_PIDs=$1
+  remakeFSRatioPlots_which_hists=$2
+  
+  wait $remakeFSRatioPlots_PIDs
+
+  for hist in $remakeFSRatioPlots_which_hists
+  do
+    code=`grep "id = \"$hist\"" scripts/FS_Mass_Window_Study.C | sed 's/.*dataset == \([0-9]*\).*/\1/g'`
+    root -l -b -q "scripts/FS_Mass_Window_Study.C($code)"
+  done
 }
+
+#function makeFSStackPlots {
+#  makePlots configs/FS_mass_window_studies/${config_id}_onZ/stackplots.conf; 
+#  makePlots configs/FS_mass_window_studies/${config_id}_aboveZ/stackplots.conf; 
+#  makePlots configs/FS_mass_window_studies/${config_id}_belowZ/stackplots.conf
+#}
+
 
 echo "Enter the name of any config for which you'd like make histograms (space seperated): "
 echo "Options: "  
@@ -30,23 +44,21 @@ echo -n "Remake ratio plots (y/n)? "
 
 read opt_remake_ratio
 
+run_fs_PIDs=
+
 for hist in $which_hists
 do
   config_id=$hist
-  for sample in $which_samples
+  for sample in $which_samples  
   do
     sample_name=$sample
-    makeAllFSHists
+    makeALLFSStudy
+    run_fs_PIDs="$run_fs_PIDs $!"
+    echo $!
   done
-  
-  makeFSStackPlots
 done
 
 if [[ $opt_remake_ratio == "y" ]]
 then 
-  for hist in $which_hists 
-  do
-    code=`grep "id = \"$hist\"" scripts/FS_Mass_Window_Study.C | sed 's/.*dataset == \([0-9]*\).*/\1/g'`
-    root -l -b -q "scripts/FS_Mass_Window_Study.C($code)"
-  done
+  remakeFSRatioPlots $run_fs_PIDs $which_hists
 fi

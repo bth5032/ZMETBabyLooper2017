@@ -1,21 +1,35 @@
 #!/bin/bash
 ##
-## Functions for doing 2016 MET Closure Tests
+## Functions for doing 2017 MET Closure Tests
 ## Bobak Hashemi
 
+HIST_OUTPUT_LOCATION=`cat ConfigHelper.C | grep "^TString HIST_OUTPUT_LOCATION=" |sed "s/.*HIST_OUTPUT_LOCATION=\"\(.*\)\";*/\1/g"`
+PLOT_OUTPUT_LOCATION=`cat ConfigHelper.C | grep "^TString PLOT_OUTPUT_LOCATION=" | sed "s/.*PLOT_OUTPUT_LOCATION=\"\(.*\)\";*/\1/g"`
 
 function makePlots {
+	if [[ $# < 1 ]]
+	then
+		echo "makePlots /path/to/config <no>(optional for no debug plots)"
+		return
+	fi
 	mkdirs $1 plots
 	conf_tmp_path=${1//.conf/.conf_tmp}
 	./preprocessConf.py $1
-	nice -n 19 root -l -b -q "drawPlots.C(\"$conf_tmp_path\")"
+	if [[ $2 == "no" ]]
+	then
+	    nice -n 19 root -l -b -q "drawPlots.C(\"$conf_tmp_path\", 0)" | tee ${PLOT_OUTPUT_LOCATION}${SR_IDENTITY}`basename $conf_filename .conf`/output.txt
+	else
+		nice -n 19 root -l -b -q "drawPlots.C(\"$conf_tmp_path\")" | tee ${PLOT_OUTPUT_LOCATION}${SR_IDENTITY}`basename $conf_filename .conf`/output.txt
+	fi
+	echo https://github.com/bth5032/ZMETBabyLooper2017/commit/`git rev-parse HEAD`/ > ${PLOT_OUTPUT_LOCATION}${SR_IDENTITY}`basename $conf_filename .conf`/commiturl.txt
 }
 
 function makeHistos {	
 	mkdirs $2 hists
 	conf_tmp_path=${2//.conf/.conf_tmp}
 	./preprocessConf.py $2
-	nice -n 19 root -l -b -q "doAll.C+(\"$1\", \"$conf_tmp_path\")"
+	nice -n 19 root -l -b -q "doAll.C+(\"$1\", \"$conf_tmp_path\")" | tee ${HIST_OUTPUT_LOCATION}${SR_IDENTITY}/$1.output
+	echo https://github.com/bth5032/ZMETBabyLooper2017/commit/`git rev-parse HEAD`/ > ${HIST_OUTPUT_LOCATION}${SR_IDENTITY}/commiturl.txt
 }	
 
 function setOutputLocations {
@@ -30,9 +44,6 @@ function setOutputLocations {
 			return 0
 		fi
 	fi
-	
-	HIST_OUTPUT_LOCATION=`cat ConfigHelper.C | grep "TString HIST_OUTPUT_LOCATION=" |sed "s/.*HIST_OUTPUT_LOCATION=\"\(.*\)\";*/\1/g"`
-	PLOT_OUTPUT_LOCATION=`cat ConfigHelper.C | grep "TString PLOT_OUTPUT_LOCATION=" | sed "s/.*PLOT_OUTPUT_LOCATION=\"\(.*\)\";*/\1/g"`
 }
 
 function mkdirs {
@@ -89,7 +100,7 @@ function _makeAllForDir {
 	if [[ $2 == "hists" ]]
 	then
 		echo $1 > outputs/$fname_hist
-		makeHistosForDir $1 >> outputs/$fname_hist 2>&1
+		makeHistosForDir $1 $3 >> outputs/$fname_hist 2>&1
 	elif [[ $2 == "plots" ]]
 	then
 		echo $1 > outputs/$fname_plots
@@ -97,7 +108,7 @@ function _makeAllForDir {
 	elif [[ $2 == "all" ]]
 	then
 		echo $1 > outputs/$fname_hist
-		makeHistosForDir $1 >> outputs/$fname_hist 2>&1
+		makeHistosForDir $1 $3 >> outputs/$fname_hist 2>&1
 
 		echo $1 > outputs/$fname_plots
 		makePlotsForDir $1 >> outputs/$fname_plots 2>&1
@@ -109,17 +120,27 @@ function _makeAllForDir {
 function makeAllForDir {
 	if [[ $# < 2 ]]
 	then
-		echo "makeAllForDir <path_to_configs> <all/hists/plots>"
+		echo "makeAllForDir <path_to_configs> <all/hists/plots> <sample_name | only if given hists or all>"
 	else
 		echo -n `basename $1`" -- "
-		_makeAllForDir $1 $2 &
+		_makeAllForDir $1 $2 $3 &
 	fi
 }
 
 function makeHistosForDir {
+	#Takes at most 2 args, the first is the name of the directory to run the run_modes over
+	#the second is the name of the sample config. If no sample config is given, it runs over "all"
+
+	if [[ $# < 2 ]]
+	then
+		makeHistosForDir_whichHist=all
+	else
+		makeHistosForDir_whichHist=$2
+	fi
+
 	if [[ -a $1/run_modes.conf ]]
 	then
-		makeHistos all $1/run_modes.conf
+		makeHistos $makeHistosForDir_whichHist $1/run_modes.conf
 	else
 		echo "Can not find $1/run_modes.conf"
 	fi
@@ -133,10 +154,10 @@ function makePlotsForDir {
 }
 
 function addIndexToDirTree {
-	#Adds the file at ~/public_html/ZMET2016/index.php into everything inside of the ~/public_html/ClosureTests/ directory for the directory given as $1.
+	#Adds the file at ~/public_html/ZMET2017/index.php into everything inside of the ~/public_html/ClosureTests/ directory for the directory given as $1.
 	topdir=$1
 
-	while [[ ${topdir%ZMET2016_NovemberClean*} == "/home/users/bhashemi/public_html/" ]]
+	while [[ ${topdir%ZMET2017*} == "/home/users/bhashemi/public_html/" ]]
 	do
 		
 		if [[ ! -a ${topdir}/index.php ]]
@@ -156,7 +177,7 @@ function makeAllConfigs {
 		return
 	fi
 
-	for i in Strong_Btag/2j/ Strong_Btag/4j/ Strong_Btag/6j/ Strong_Bveto/2j/ Strong_Bveto/4j/ Strong_Bveto/6j/ TChiHZ/ baseline/ TChiWZ/
+	for i in Strong_Btag/2j/ Strong_Btag/4j/ Strong_Btag/6j/ Strong_Bveto/2j/ Strong_Bveto/4j/ Strong_Bveto/6j/ TChiHZ/ baseline/ TChiWZ/ Edge/
 	do
 		makeAllForDir $2/${i} $1
 	done
@@ -271,4 +292,119 @@ function tempErr {
 		cat $arg | grep "TEMPLATEDEBUG: " | sed -e 's/^TEMPLATEDEBUG: //g' -e 's/-6001/+/g'
 		echo ""
 	done
+}
+
+function uncParse {
+	if [[ $# < 1 ]]
+	then
+		echo "uncParse <path/to/datacard/template>"
+		return
+	fi
+
+	cat $1 | grep -o "<[^ ]*>" | sort | uniq
+}
+
+function effTable {
+	#===========================================================
+	# Prints the efficiency table for the configuration with
+	# a few cosmetic fixes, such a removing {document} tags and
+	# changing ranges x-6001 to x+. 
+	#
+	# This is mainly used for the Templates Closure Tests at the 
+	# moment, which are default output to outputs/efficiency_table...
+	#===========================================================
+	
+
+	if [[ $# < 1 ]]
+	then
+		echo "effTable <path/to/plot/output_1> <path/to/plot/output_2> ..."
+		return
+	fi
+
+	echo "\\documentclass[a4paper,landscape]{article}"
+	echo "\\usepackage{fullpage}"
+	echo "\\usepackage{float}"
+	echo "\\usepackage{multicol}"
+	echo "\\usepackage{adjustbox}"
+	echo "\\begin{document}"
+
+	for arg in ${@}
+	do
+		effTable_name=${arg#*table_}
+		effTable_name=${effTable_name%.tex}
+		effTable_name=${effTable_name//_/ }
+		echo "\\section*{$effTable_name}"
+		cat $arg | sed -e 's/-6001.00/+/g' -e 's,+/-,$\\pm$,g' -e 's/\[ht!\]/[H]/g' | grep -v "{document}" | grep -v "documentclass{article}" | grep -v "usepackage"
+		echo ""
+	done
+
+	echo "\\end{document}"
+}
+
+function backupConfig {
+	#===========================================================
+	# Backs up configuration with the given config directory, allows
+	# you to leave a message in the backup dir which tells what has
+	# changed in the new version.
+	#===========================================================
+	
+	backupConfig_path=$1
+
+	if [[ $# < 1 ]]
+	then
+		echo "backupConfig configs/path/to/confdir"
+  	read -e -p "Config Dir Path: " backupConfig_path
+  fi
+
+  backupConfig_path=${backupConfig_path%/} #Remove Trailing '/' if it's there.
+
+  SR_IDENTITY=${backupConfig_path#*configs/}
+
+	backupConfig_movePlots="n"
+	backupConfig_moveHists="n"
+	backupConfig_timestamp=`date +%m%d%y_%Hh%M`
+	backupConfig_message=
+
+	backupConfig_histdir=${HIST_OUTPUT_LOCATION}${SR_IDENTITY} #Current hists dir
+	backupConfig_histbak=${backupConfig_histdir}_bak${backupConfig_timestamp} #New hists dir
+
+	backupConfig_plotdir=${PLOT_OUTPUT_LOCATION}${SR_IDENTITY} #Current plots dir
+	backupConfig_plotbak=${backupConfig_plotdir}_bak${backupConfig_timestamp} #New plots dir
+
+  if [[ ! -d $backupConfig_path ]]
+	then
+		echo "Could not find directory: "$backupConfig_path", please try again"
+  	return
+  fi
+
+ 	if [[ -d ${backupConfig_histdir} ]] 
+ 	then
+ 		read -p "move hists at ${backupConfig_histdir} to ${backupConfig_histbak}? (y/n)" backupConfig_moveHists
+	else
+		echo "No previous hists found at ${backupConfig_histdir}"
+	fi
+
+	if [[ -d ${backupConfig_plotdir} ]] 
+ 	then
+ 		read -p "move plots at ${backupConfig_plotdir} to ${backupConfig_plotbak}? (y/n)" backupConfig_movePlots
+	else
+		echo "No previous plots found at ${backupConfig_plotdir}"
+	fi
+
+	read -e -p "What changes in the next version: " backupConfig_message
+
+	if [[ "$backupConfig_moveHists" == "y" ]]
+	then
+		cp -r $backupConfig_histdir $backupConfig_histbak
+		echo $backupConfig_message > ${backupConfig_histbak}/backup_log.txt
+		echo "Moved Hists"
+	fi
+
+	if [[ "$backupConfig_movePlots" == "y" ]]
+	then
+		cp -r $backupConfig_plotdir $backupConfig_plotbak
+		echo $backupConfig_message > ${backupConfig_plotbak}/backup_log.txt
+		echo "Moved Plots"
+	fi
+
 }

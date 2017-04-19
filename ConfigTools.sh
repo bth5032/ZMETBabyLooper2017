@@ -76,7 +76,7 @@ function addDefaultToConfigs {
     do
       findTopOfFirstConfig $f
       sed -i.bak $DEFAULT_LOCATION'i\
-      DEFAULT::'$1'
+DEFAULT::'$1'
       
       ' $f
       #echo "File Succesfully Altered: "`head -n1 $f`

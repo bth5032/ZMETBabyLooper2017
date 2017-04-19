@@ -13,7 +13,7 @@ using namespace std;
 void makePtReweightHisto(ConfigParser * conf)
 {
   TString hist_name = "vpt";
-  TString output_dir = getOutputDir(conf, "hist"); //get output dir location for this histogram ~/nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiHZ/
+  TString output_dir = getOutputDir(conf, "hist"); //get output dir location for this histogram something like /nfs-7/userdata/bobak/ZMET2016_Hists_NovemberClean/prediction/PhotonData_VPTRWT/TChiHZ/
   TString output_location = output_dir+conf->get("Name")+"_vpt_rwt.root";
 
   //-----------------------------------
@@ -21,17 +21,17 @@ void makePtReweightHisto(ConfigParser * conf)
   //-----------------------------------
   TString primary_path = output_dir;
   primary_path.ReplaceAll("/PhotonData_VPTRWT/", "/DileptonData/");
-  primary_path += "DileptonData.root";
+  primary_path += (conf->get("vpt_rwt_primary_samplename") != "") ? conf->get("vpt_rwt_primary_samplename")+".root" : "DileptonData.root";
 
   TString secondary_path = output_dir;
   secondary_path.ReplaceAll("/PhotonData_VPTRWT/", "/PhotonData/");
-  secondary_path += conf->get("Name")+".root";
+  secondary_path += (conf->get("vpt_rwt_secondary_samplename") != "") ? conf->get("vpt_rwt_secondary_samplename")+".root" : conf->get("Name")+".root";
 
-  /*cout<<"primary_histos: "<<primary_path<<endl;
+  cout<<"primary_histos: "<<primary_path<<endl;
   cout<<"output_dir: "<<output_dir<<endl;
   cout<<"hist_name: "<<hist_name<<endl;
   cout<<"secondary_path: "<<secondary_path<<endl;
-  cout<<"output_location: "<<output_location<<endl;*/
+  cout<<"output_location: "<<output_location<<endl;
 
   //....................
   //Subtraction Hists
@@ -73,10 +73,10 @@ void makePtReweightHisto(ConfigParser * conf)
     subtractor_paths.push_back(s_path);
     subtractor_scales.push_back(0.94);
   }
-  /*cout<<"subtractor_paths: "<<endl;
+  cout<<"subtractor_paths: "<<endl;
   for (int i=0; i < (int) subtractor_paths.size(); i++){
     cout<<subtractor_paths.at(i)<<endl;
-  }*/
+  }
 
   TFile * f_primary = TFile::Open(primary_path , "READ"); //typically location to data hist
   TFile * f_secondary = TFile::Open(secondary_path, "READ"); //typically location to zjets hist
@@ -98,14 +98,18 @@ void makePtReweightHisto(ConfigParser * conf)
   h_primary = (TH1D*)f_primary->Get(hist_name)->Clone(primary_name);
   h_secondary = (TH1D*)f_secondary->Get(hist_name)->Clone(secondary_name);
   
-  h_subtractor = (TH1D*)(f_subtractors.at(0))->Get(hist_name)->Clone("subtractor_"+primary_name);
-  h_subtractor->Scale(subtractor_scales.at(0));
-  for (int i=1; i < (int) subtractor_paths.size(); i++){
-    h_subtractor->Add((TH1D*)(f_subtractors.at(i))->Get(hist_name), subtractor_scales.at(i));
+  if (conf->get("no_subtraction_vpt_rwt") != "true"){
+    h_subtractor = (TH1D*)(f_subtractors.at(0))->Get(hist_name)->Clone("subtractor_"+primary_name);
+    h_subtractor->Scale(subtractor_scales.at(0));
+    for (int i=1; i < (int) subtractor_paths.size(); i++){
+      h_subtractor->Add((TH1D*)(f_subtractors.at(i))->Get(hist_name), subtractor_scales.at(i));
+    }
+    cout<<"Retrived Histograms, subtracting other backgrounds"<<endl;
+    h_primary->Add(h_subtractor, -1);
   }
-  cout<<"Retrived Histograms, subtracting other backgrounds"<<endl;
-  h_primary->Add(h_subtractor, -1);
-
+  else{
+    cout<<"Skipping background subtraction"<<endl;
+  }
   cout<<"Zeroing negative bins"<<endl;
 
   zeroNegatives(h_primary);
